@@ -57,7 +57,7 @@ tl.to(".ellipse > *",{
     ".ellipse",
     {
         //y: "85%",
-        // get 85% of the current height of the viewport
+        // get 85% of the current height of the window
         y: () => window.innerHeight * 0.50,
         duration: 1,
     })
