@@ -1,8 +1,11 @@
 /* Sentinel North Compendium Styling */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
 
 body {
     margin: 0;
-    font-family: 'Montserrat', serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: max(1.2vw,1.2vh);
 }
 
 .menu {
@@ -21,26 +24,89 @@ body {
     scroll-snap-type: y;
 }
 
-header {
+.background {
+    position: absolute;
+    width: 120vw;
+    height: 120vh;
+    object-fit: fill;
+    z-index: 0;
+}
+
+.centered {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    transform-style: preserve-3d;
-    z-index: -2;
+}
+
+.ellipse {
+    width: min(60vh, 60vw);
+    height: min(60vh, 60vw);
+    border-radius: 50%;
+    border: min(6vh,6vw) solid rgba(255,255,255,0.6);
+    /* transform: translateZ(-20px) scale(3); */
+    box-sizing: border-box;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-title {
+    margin-top: 1em;
+    font-size: 5em;
+    letter-spacing: 0.2em;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    z-index: 10;
+    text-transform: uppercase;
+}
+
+.hero-subtitle {
+    font-size: 1.1em;
+    letter-spacing: 0.2em;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    z-index: 10;
+    text-shadow: #9b9a9a 0px 0px 10px;
+}
+
+.hero-date {
+    margin-top: 1em;
+    font-size: 2em;
+    letter-spacing: 0.2em;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    z-index: 10;
+    text-transform: uppercase;
+    text-shadow: #9b9a9a 0px 0px 10px;
+}
+
+.hero-logo {
+    position: absolute;
+    top:0;
+    left: 2vw;
+    width: 10vw;
+    height: 10vw;
+    object-fit: contain;
+    z-index: 10;
 }
 
 .down-arrow {
     position: absolute;
-    bottom: -50%;
-    height: 18vh;
+    bottom: 0;
+    height: 15vh;
     width: 100vw;
     background-color: white;
     display: flex;
     justify-content: center;
     align-content: center;
-    transform: translateZ(-10px) scale(2);
+    z-index: 2;
+    /* transform: translateZ(-10px) scale(2); */
 }
 
 .down-arrow-link {
@@ -50,28 +116,11 @@ header {
 }
 
 
-.ellipse {
-    width: min(60vh, 60vw);
-    height: min(60vh, 60vw);
-    margin-right: min(2vh,2vw);
-    border-radius: 50%;
-    border: min(6vh,6vw) solid rgba(255,255,255,0.6);
-    transform: translateZ(-20px) scale(3);
-    box-sizing: border-box;
-}
-
-.background {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    transform: translateZ(-50px) scale(6);
-}
-
 .content {
-    height: 100vh;
+    min-height: 100vh;
     background-color: white;
     scroll-snap-align: start;
+    z-index: 1;
 }
 
 .section-header {
@@ -79,6 +128,8 @@ header {
     justify-content: center;
     align-items: center;
     position: relative;
+    z-index: 1;
+    background-color: white;
 }
 
 .round-top {
@@ -89,6 +140,7 @@ header {
     box-shadow: 0px 8px 12px -1px #BDBDBD;
     box-sizing: content-box;
     position: relative;
+    opacity: 0;
 }
 
 .content-grid {
@@ -113,8 +165,8 @@ header {
 .section-title {
     grid-column: 2;
     text-transform: uppercase;
-    font-size: 1.25rem;
-    font-weight: 200;
+    font-size: 1.75em;
+    font-weight: 400;
     letter-spacing: 0.2em;
     /* grey border 10 px above */
 
@@ -122,8 +174,8 @@ header {
 
 .section-subtitle {
     text-transform: uppercase;
-    font-size: 0.75rem;
-    font-weight: 200;
+    font-size: 1rem;
+    font-weight: 300;
 }
 
 .top-border {
@@ -140,5 +192,7 @@ header {
 }
 
 .section-text {
-
+    font-size: 1.1em;
+    letter-spacing: 0.1em;
+    line-height: 1.75em;
 }
