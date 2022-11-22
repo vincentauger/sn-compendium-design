@@ -46,7 +46,7 @@ let tl = gsap.timeline({
         endTrigger: ".round-top",
         toggleActions: "restart none none reverse",
         scrub: true,
-    }
+    }/assets/img4_large.jpeg
 });
 
 tl.to(".ellipse > *",{
