@@ -5,7 +5,7 @@
 body {
     margin: 0;
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: max(1.2vw,1.2vh);
+    font-size: 1.2vmin
 }
 
 .menu {
@@ -90,8 +90,8 @@ body {
     position: absolute;
     top:0;
     left: 2vmax;
-    width: 10vmax;
-    height: 10vmax;
+    width: min(10vmax,200px);
+    height: min(10vmax,200px);
     object-fit: contain;
     z-index: 10;
 }
