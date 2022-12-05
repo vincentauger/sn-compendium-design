@@ -1,157 +1,114 @@
-/* Sentinel North Compendium Styling */
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
-
-
-body {
-    margin: 0;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 14px;
-}
-
-.menu {
-    width: 100vw;
-    height: 50px;
-    background-color: red;
-}
-
-.wrapper {
-    height: 100vh;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    perspective: 10px;
-    background-color: white;
+/* Wrapper Section */
+.vt-wrapper {
+    position: relative;
     scroll-behavior: smooth;
     scroll-snap-type: y;
 }
 
-.background {
-    position: absolute;
-    width: 120vw;
-    height: 120vh;
-    object-fit: fit;
-    z-index: 0;
-}
-
-.centered {
+/* Sections / Pages */
+.vt-section {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: white;
+    border: #0000ff solid 1px;
+    scroll-snap-align: start;
+    display: grid;
+    align-content: center;
+    overflow: hidden;
+
 }
 
-.ellipse {
-    width: 60vmin;
-    height: 60vmin;
-    border-radius: 50%;
-    border: 6vmin solid rgba(255,255,255,0.6);
-    /* transform: translateZ(-20px) scale(3); */
-    box-sizing: border-box;
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.vt-head {
+    min-height: 75vh;
+    height: 75vh;
 }
 
-.hero-title {
-    margin-top: 1em;
-    font-size: 7em;
-    letter-spacing: 0.2em;
-    font-weight: 400;
-    color: white;
-    text-align: center;
-    z-index: 10;
-    text-transform: uppercase;
-}
-
-@media (max-width: 768px) {
-    .hero-title {
-        font-size: 3em;
+@media (max-width: 968px) {
+    .vt-head{
+        height: 90vh;
     }
 }
 
-.hero-subtitle {
-    font-size: 1.1em;
-    letter-spacing: 0.2em;
-    font-weight: 400;
-    color: white;
-    text-align: center;
-    z-index: 10;
-    text-shadow: #9b9a9a 0px 0px 10px;
+
+/* Hero title page */
+
+/* Class to make an image the entire background at all resolutions*/
+
+.vt-hero-background {
+    background: url('../assets/img4_large.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    z-index: -1;
+
 }
 
-.hero-date {
-    margin-top: 1em;
-    font-size: 2em;
-    letter-spacing: 0.2em;
-    font-weight: 400;
-    color: white;
-    text-align: center;
-    z-index: 10;
-    text-transform: uppercase;
-    text-shadow: #9b9a9a 0px 0px 10px;
-}
-
-.hero-logo {
+.vt-hero-content {
     position: absolute;
-    top:0;
-    left: 2vmax;
-    width: min(10vmax,200px);
-    height: min(10vmax,200px);
-    object-fit: contain;
-    z-index: 10;
-}
-
-.down-arrow {
-    position: absolute;
-    bottom: 0;
-    height: 15vh;
-    width: 100vw;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    z-index: 2;
-    /* transform: translateZ(-10px) scale(2); */
-}
-
-.down-arrow-link {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
-
-.content {
-    min-height: 100vh;
-    background-color: white;
-    scroll-snap-align: start;
-    z-index: 1;
+/* img elements inside vt-hero-content size is 75% of height */
+.vt-hero-content img {
+    width: min(60vh, 60vw);
 }
 
-.section-header {
+.vt-section-header {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    z-index: 1;
     background-color: white;
 }
 
-.round-top {
+.vt-section-header img {
     width: min(60vh, 60vw);
     height: min(30vh, 30vw);
     border-bottom-left-radius: 30vh;
     border-bottom-right-radius: 30vh;
     box-shadow: 0px 8px 12px -1px #BDBDBD;
     box-sizing: content-box;
-    position: relative;
-    opacity: 0;
+    overflow: hidden;
 }
 
-.content-grid {
+
+.vt-intro-background {
+    background: url('../assets/img1_large.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: circle(30vh at 50% 50%);
+    height: 100%;
+    width: 100%;
+    top: -87vh;
+    position: absolute;
+
+
+}
+
+
+/* background colors for sections: red, green, and blue */
+.vt-red {
+    background-color: #ff0000;
+}
+
+.vt-green {
+    background-color: #00ff00;
+}
+
+.vt-blue {
+    background-color: #0000ff;
+}
+
+
+/* Intro Section */
+
+.vt-content-grid {
     display: grid;
-    margin-top: 10%;
+    margin-top: 75vh;
     grid-template-columns: 0.25fr 1fr;
     grid-gap: 3vw;
     height: 100%;
@@ -161,14 +118,14 @@ body {
 }
 
 @media (max-width: 800px) {
-    .content-grid {
+    .vt-content-grid {
         grid-template-columns: 1fr;
         row-gap: 5vw;
         height: auto;
     }
 }
 
-.section-title {
+.vt-section-title {
     grid-column: 2;
     text-transform: uppercase;
     font-size: 1.75em;
@@ -178,27 +135,83 @@ body {
 
 }
 
-.section-subtitle {
+.vt-section-subtitle {
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 300;
 }
 
-.top-border {
+.vt-top-border {
     border-top: 1px solid #9b9a9a;
     padding-top: 10px;
 }
 
 /* hide top border if screen smaller */
 @media (max-width: 800px) {
-    .top-border {
+    .vt-top-border {
         border-top: none;
         padding-top: 0;
     }
 }
 
-.section-text {
+.vt-section-text {
     font-size: 1.25em;
     letter-spacing: 0.1em;
     line-height: 1.75em;
 }
+
+/* Mocking CSS taken from template not required in module */
+
+/**
+ * @file
+ * Utility classes to hide elements in different ways.
+ */
+
+/**
+ * Hide elements from all users.
+ *
+ * Used for elements which should not be immediately displayed to any user. An
+ * example would be collapsible details that will be expanded with a click
+ * from a user. The effect of this class can be toggled with the jQuery show()
+ * and hide() functions.
+ */
+ .hidden {
+    display: none;
+  }
+
+  /**
+   * Hide elements visually, but keep them available for screen readers.
+   *
+   * Used for information required for screen reader users to understand and use
+   * the site where visual display is undesirable. Information provided in this
+   * manner should be kept concise, to avoid unnecessary burden on the user.
+   * "!important" is used to prevent unintentional overrides.
+   */
+  .visually-hidden {
+    position: absolute !important;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    width: 1px;
+    height: 1px;
+    word-wrap: normal;
+  }
+
+  /**
+   * The .focusable class extends the .visually-hidden class to allow
+   * the element to be focusable when navigated to via the keyboard.
+   */
+  .visually-hidden.focusable:active,
+  .visually-hidden.focusable:focus {
+    position: static !important;
+    overflow: visible;
+    clip: auto;
+    width: auto;
+    height: auto;
+  }
+
+  /**
+   * Hide visually and from screen readers, but maintain layout.
+   */
+  .invisible {
+    visibility: hidden;
+  }
