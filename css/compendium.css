@@ -68,7 +68,7 @@
     background: url('../assets/img1_large.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
-    clip-path: circle(min(30vh,30vw) at 50% 50%);
+    clip-path: circle(min(23vh,23vw) at 50% 50%);
     height: 100%;
     width: 100%;
     top: -87.50vh;
