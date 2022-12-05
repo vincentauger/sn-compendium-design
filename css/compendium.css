@@ -1,8 +1,6 @@
 /* Wrapper Section */
 .vt-wrapper {
     position: relative;
-    scroll-behavior: smooth;
-    scroll-snap-type: y;
 }
 
 /* Sections / Pages */
@@ -12,10 +10,11 @@
     width: 100vw;
     background-color: white;
     /* border: #0000ff solid 1px; */
-    scroll-snap-align: start;
     display: grid;
     align-content: center;
     overflow: hidden;
+    will-change: transform;
+    will-change: filter;
 
 }
 
@@ -74,6 +73,8 @@
     width: 100%;
     top: -87.50vh;
     position: absolute;
+    will-change: transform;
+    will-change: filter;
 }
 
 .down-arrow {
@@ -85,6 +86,8 @@
     align-content: center;
     z-index: 2;
     /* transform: translateZ(-10px) scale(2); */
+    will-change: transform;
+    will-change: filter;
 }
 
 .down-arrow img {
