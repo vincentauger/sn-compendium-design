@@ -25,12 +25,20 @@ gsap.to(".vt-intro-background",
             start: "top top",
             end: "top+=100% top",
             scrub: true,
-            markers: true
+            markers: false
         },
         y: "75vh",
         ease: "linear",
     });
 
+gsap.to(".down-arrow",{
+    scrollTrigger: {
+        trigger: ".vt-head",
+        start: "-50px top",
+        toggleActions: "restart none none reverse",
+    },
+    opacity: 0,
+});
 
 // gsap.to(
 //     ".background",

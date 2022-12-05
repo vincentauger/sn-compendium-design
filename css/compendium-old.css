@@ -104,8 +104,8 @@ body {
 
 .down-arrow {
     position: absolute;
-    bottom: 0;
-    height: 15vh;
+    top: 0;
+    height: 50px;
     width: 100vw;
     background-color: white;
     display: flex;
