@@ -53,7 +53,7 @@
 
 /* img elements inside vt-hero-content size is 75% of height */
 .vt-hero-content img {
-    width: min(60vh, 60vw);
+    width: min(60vh, 80vw);
 }
 
 .vt-section-header {
@@ -68,10 +68,11 @@
     background: url('../assets/img1_large.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
-    clip-path: circle(min(23vh,23vw) at 50% 50%);
-    height: 100%;
+    background-position: bottom center;
+    clip-path: circle(min(23vh,31vw) at 50% 50%);
+    height: 65vmin;
     width: 100%;
-    top: -87.50vh;
+    top: 0;
     position: absolute;
     will-change: transform;
     will-change: filter;

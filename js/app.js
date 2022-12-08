@@ -14,6 +14,25 @@ ScrollTrigger.create({
     pinSpacing: false,
 })
 
+
+// a function that calculate distance from absolute top of page to top of given middle of the given id
+function getOffsetTop(id) {
+    const el = document.getElementById(id);
+    const rect = el.getBoundingClientRect();
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    let offset = rect.top + scrollTop;
+    return offset + rect.height / 2;
+}
+
+function alignHeroMask() {
+    let offset = getOffsetTop("vt-hero-img") - getOffsetTop("vt-hero-mask");
+    const heroMask = document.getElementById("vt-hero-mask");
+    heroMask.style.top = `${offset}px`;
+}
+
+// on initial page load
+alignHeroMask();
+
 gsap.to(".vt-intro-background",
     {
         scrollTrigger: {
@@ -23,7 +42,7 @@ gsap.to(".vt-intro-background",
             scrub: true,
             markers: false
         },
-        y: "75vh",
+        y: () => window.innerWidth > 968 ? "75vh" : "90vh",
         ease: "none",
     });
 
