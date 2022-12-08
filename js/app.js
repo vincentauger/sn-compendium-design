@@ -19,13 +19,17 @@ ScrollTrigger.create({
 function getOffsetTop(id) {
     const el = document.getElementById(id);
     const rect = el.getBoundingClientRect();
+    console.log(rect.top);
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     let offset = rect.top + scrollTop;
     return offset + rect.height / 2;
 }
 
 function alignHeroMask() {
-    let offset = getOffsetTop("vt-hero-img") - getOffsetTop("vt-hero-mask");
+    heroImgOffset = getOffsetTop("vt-hero-img");
+    heroMaskOffset = getOffsetTop("vt-hero-mask");
+    console.log(heroImgOffset, heroMaskOffset)
+    let offset = heroImgOffset - heroMaskOffset;
     const heroMask = document.getElementById("vt-hero-mask");
     heroMask.style.top = `${offset}px`;
 }

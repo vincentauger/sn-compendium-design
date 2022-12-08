@@ -35,10 +35,9 @@
 /* Class to make an image the entire background at all resolutions*/
 
 .vt-hero-background {
-    background: url('../assets/img4_large.jpeg') no-repeat center center fixed;
-    background-size: cover;
-    z-index: -1;
-
+    background: url('../assets/img4_large.jpeg') center top no-repeat scroll;
+    background-size: auto 100vh;
+    background-position: bottom center;
 }
 
 .vt-hero-content {
