@@ -1,7 +1,6 @@
 /* Wrapper Section */
 .vt-wrapper {
     position: relative;
-    max-width: 1920px;
     margin-bottom: 15rem;
 }
 
@@ -33,10 +32,19 @@
 
 /* Hero title page */
 
+/* Background should cover on all devices and be compatible with
+mobile and Safari */
 .vt-hero-background {
     background: url('../assets/img4_large.jpeg') center top no-repeat scroll;
-    background-size: auto 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-position: bottom center;
+    height: 75vh;
+    width: 100%;
+    position: relative;
+    will-change: transform;
+    will-change: filter;
+
 }
 
 .vt-hero-content {
@@ -70,7 +78,6 @@
     clip-path: circle(min(31vw, 230px));
     height: min(62vw, 460px);
     width: 100%;
-    top: calc(((75vh / 2) + 7vh + 460px - 3.5vh) * -1);
     position: relative;
     will-change: transform;
     will-change: filter;
@@ -108,7 +115,6 @@
     margin: 0 auto;
     height: 100%;
     width: 100%;
-    max-width: 1920px;
     padding: 0 10vw;
     color: grey;
 }
@@ -180,7 +186,6 @@
     margin-right: auto;
     margin-bottom: auto;
     width: 100%;
-    max-width: 1920px;
     padding: 0 10vw;
     color: grey;
 }
