@@ -1,6 +1,8 @@
 /* Wrapper Section */
 .vt-wrapper {
     position: relative;
+    max-width: 1920px;
+    margin-bottom: 15rem;
 }
 
 /* Sections / Pages */
@@ -11,7 +13,6 @@
     background-color: white;
     /* border: #0000ff solid 1px; */
     display: grid;
-    align-content: center;
     overflow: hidden;
     will-change: transform;
     will-change: filter;
@@ -23,7 +24,7 @@
     height: 75vh;
 }
 
-@media (max-width: 968px) {
+@media (max-width: 992px) {
     .vt-head{
         height: 90vh;
     }
@@ -31,8 +32,6 @@
 
 
 /* Hero title page */
-
-/* Class to make an image the entire background at all resolutions*/
 
 .vt-hero-background {
     background: url('../assets/img4_large.jpeg') center top no-repeat scroll;
@@ -52,7 +51,7 @@
 
 /* img elements inside vt-hero-content size is 75% of height */
 .vt-hero-content img {
-    width: min(60vh, 80vw);
+    width: min(80vw, 600px);
 }
 
 .vt-section-header {
@@ -68,26 +67,24 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom center;
-    clip-path: circle(min(23vh,31vw) at 50% 50%);
-    height: 65vmin;
+    clip-path: circle(min(31vw, 230px));
+    height: min(62vw, 460px);
     width: 100%;
-    top: 0;
-    position: absolute;
+    top: calc(((75vh / 2) + 7vh + 460px - 3.5vh) * -1);
+    position: relative;
     will-change: transform;
     will-change: filter;
 }
 
 .down-arrow {
-    position: absolute;
-    top: 0;
+    position: relative;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-content: center;
-    z-index: 2;
-    /* transform: translateZ(-10px) scale(2); */
     will-change: transform;
     will-change: filter;
+    height: 7vh;
 }
 
 .down-arrow img {
@@ -102,32 +99,18 @@
     justify-content: center;
 }
 
-
-/* background colors for sections: red, green, and blue */
-.vt-red {
-    background-color: #ff0000;
-}
-
-.vt-green {
-    background-color: #00ff00;
-}
-
-.vt-blue {
-    background-color: #0000ff;
-}
-
-
 /* Intro Section */
 
 .vt-content-grid {
     display: grid;
-    margin-top: 75vh;
-    grid-template-columns: 0.25fr 1fr;
-    grid-gap: 3vw;
+    grid-template-columns: 0.3fr 1fr;
+    grid-gap: 5rem;
+    margin: 0 auto;
     height: 100%;
+    width: 100%;
+    max-width: 1920px;
     padding: 0 10vw;
     color: grey;
-    font-weight: 300;
 }
 
 @media (max-width: 800px) {
@@ -139,9 +122,7 @@
 }
 
 .vt-section-title {
-    grid-column: 2;
-    text-transform: uppercase;
-    font-size: 1.75em;
+    font-size: 3rem;
     font-weight: 400;
     letter-spacing: 0.2em;
     /* grey border 10 px above */
@@ -149,9 +130,17 @@
 }
 
 .vt-section-subtitle {
-    text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 300;
+}
+
+.vt-section-secondary-title {
+    font-size: 2.25rem;
+    font-weight: 300;
+}
+
+.vt-uppercase {
+    text-transform: uppercase;
 }
 
 .vt-top-border {
@@ -168,10 +157,82 @@
 }
 
 .vt-section-text {
-    font-size: 1.25em;
+    font-size: 1.75rem;
     letter-spacing: 0.1em;
-    line-height: 1.75em;
+    line-height: 2.75rem;
 }
+
+.vt-condensed-text {
+    line-height: 1.75rem;
+}
+
+.vt-bottom-margin-xs {
+    margin-bottom: 1rem;
+}
+
+/* Vitrine Index Section */
+.vt-index-grid-container {
+    display: grid;
+    grid-template-columns: 0.3fr 1fr;
+    grid-gap: 5rem;
+    margin-top: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    width: 100%;
+    max-width: 1920px;
+    padding: 0 10vw;
+    color: grey;
+}
+
+.vt-index-item-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1rem;
+    column-gap: 3rem;
+    width: 100%;
+    color: grey;
+    counter-reset: item-number;
+}
+
+.vt-index-item-grid::after {
+    background-image: url(../assets/ellipse-bg.svg);
+    background-size: 240%;
+    background-position: 50% 60%;
+    content: "";
+    width: 29.75vw;
+    height: 100%;
+    z-index: 23;
+    position: absolute;
+}
+
+.vt-index-img {
+    width: 100%;
+    max-height: 20rem;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.vt-index-text-container {
+    position: relative;
+}
+
+.vt-link-arrow {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 4.5rem;
+    height: 4.5rem;
+}
+
+.vt-link-arrow img {
+    rotate: -90deg;
+}
+
+.vt-link-arrow img:hover {
+    filter: brightness(0.5);
+}
+
 
 /* Mocking CSS taken from template not required in module */
 
