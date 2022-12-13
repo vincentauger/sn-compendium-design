@@ -77,7 +77,7 @@ mobile and Safari */
     background-position: bottom center;
     clip-path: circle(min(31vw, 230px));
     top: calc(-7rem - (75vh / 2) - (min(31vw, 230px)));
-    margin-bottom: 0vh;
+    margin-bottom: 300px;
     height: min(62vw, 460px);
     position: relative;
 }

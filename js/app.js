@@ -51,18 +51,18 @@ gsap.to(".vt-intro-background",
         ease: "none",
     });
 
-gsap.to(".vt-intro-background",
-    {
-        scrollTrigger: {
-            trigger: ".down-arrow",
-            start: "top center",
-            end: "bottom top",
-            scrub: true,
-            markers: false
-        },
-        marginBottom: "300px",
-        ease: "none",
-    });
+// gsap.to(".vt-intro-background",
+//     {
+//         scrollTrigger: {
+//             trigger: ".down-arrow",
+//             start: "top center",
+//             end: "bottom top",
+//             scrub: true,
+//             markers: false
+//         },
+//         marginBottom: "300px",
+//         ease: "none",
+//     });
 
 gsap.to(".down-arrow",{
     scrollTrigger: {
