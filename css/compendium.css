@@ -7,8 +7,7 @@
 /* Sections / Pages */
 .vt-section {
     position: relative;
-    min-height: 100vh;
-    width: 100vw;
+    width: 100%;
     background-color: white;
     /* border: #0000ff solid 1px; */
     display: grid;
@@ -53,8 +52,9 @@ mobile and Safari */
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
     height: 100%;
+    width: 100%;
+
 }
 
 /* img elements inside vt-hero-content size is 75% of height */
@@ -76,28 +76,27 @@ mobile and Safari */
     background-size: cover;
     background-position: bottom center;
     clip-path: circle(min(31vw, 230px));
+    top: calc(-7rem - (75vh / 2) - (min(31vw, 230px)));
+    margin-bottom: 0vh;
     height: min(62vw, 460px);
-    width: 100%;
     position: relative;
-    will-change: transform;
-    will-change: filter;
 }
 
 .down-arrow {
     position: relative;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-content: center;
     will-change: transform;
     will-change: filter;
-    height: 7vh;
+    height: 7rem;
 }
 
 .down-arrow img {
-    width: 5vh;
-    height: 5vh;
-    margin-top: 2vh;
+    width: 5rem;
+    height: 5rem;
+    margin-top: 2rem;
 }
 
 .down-arrow-link {
@@ -122,7 +121,7 @@ mobile and Safari */
 @media (max-width: 800px) {
     .vt-content-grid {
         grid-template-columns: 1fr;
-        row-gap: 5vw;
+        row-gap: 5rem;
         height: auto;
     }
 }
@@ -152,6 +151,10 @@ mobile and Safari */
 .vt-top-border {
     border-top: 1px solid #9b9a9a;
     padding-top: 10px;
+}
+
+.vt-section-top-margin {
+    margin-top: 25rem;
 }
 
 /* hide top border if screen smaller */
