@@ -60,7 +60,7 @@ gsap.to(".vt-intro-background",
             scrub: true,
             markers: false
         },
-        marginBottom: "40rem",
+        marginBottom: "300px",
         ease: "none",
     });
 
