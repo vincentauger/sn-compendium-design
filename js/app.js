@@ -58,7 +58,7 @@ gsap.to(".vt-intro-background",
             start: "top center",
             end: "bottom top",
             scrub: true,
-            markers: true
+            markers: false
         },
         marginBottom: "40rem",
         ease: "none",
