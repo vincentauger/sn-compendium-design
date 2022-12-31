@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SN Compendium Design</title>
+    <link rel="stylesheet" href="./css/app.min.css">
+    <link rel="stylesheet" href="./css/compendium.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script defer src="./js/app.js"></script>
+</head>
+<body style>
+<!-- ULAVAL Header Mockup -->
+<a href="#main-content" class="visually-hidden focusable">
+    Aller au contenu principal
+  </a>
+<div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <header class="normes-ul-entete-ul">
+        <div class="entete-contenu">
+            <div class="wrapper-logo">
+                <a href="https://www.ulaval.ca" class="logo-ul">
+                    <object type="image/svg+xml" data="./assets/ulaval_ca/logo-ul.svg" width="125" height="52" class="logo-complet">Logo Université Laval
+                    </object>
+                    <object type="image/svg+xml" data="./assets/ulaval_ca/logo-ul-mobile.svg" width="35" height="44" class="logo-mobile">Logo Université Laval
+                    </object>
+                </a>
+            </div>
+            <div class="organisation">
+                <div class="titres">
+                    <a href="/fr" class="faculte">
+                        Sentinelle Nord                </a>
+                </div>
+            </div>
+            <nav class="navigation-generale">
+                <ul>
+                    <li class="section_32669 gauche">
+                        <a href="/fr/a-propos-de-sentinelle-nord" target="_self">
+                            À propos                    </a>
+                    </li>
+                    <li class="section_32671 droite">
+                        <a href="/fr/nous-joindre" target="_self">
+                            Nous joindre                    </a>
+                    </li>
+                                </ul>
+            </nav>
+            <a class="nav-mobile-trigger" id="nav-toggle" href="#"><span></span></a>
+            <div class="switch-langue">
+                 <div class="language-switcher-language-url" id="block-lang-switch" role="navigation">
+
+
+          <ul class="links"><li hreflang="en" data-drupal-link-query="{&quot;Q&quot;:&quot;\/fr\/vitrine&quot;}" data-drupal-link-system-path="vitrine"><a href="/en/vitrine?Q=/fr/vitrine" class="language-link" hreflang="en" data-drupal-link-query="{&quot;Q&quot;:&quot;\/fr\/vitrine&quot;}" data-drupal-link-system-path="vitrine">en</a></li><li hreflang="fr" data-drupal-link-query="{&quot;Q&quot;:&quot;\/fr\/vitrine&quot;}" data-drupal-link-system-path="vitrine" class="is-active"><a href="/fr/vitrine?Q=/fr/vitrine" class="language-link is-active" style="display:none;" hreflang="fr" data-drupal-link-query="{&quot;Q&quot;:&quot;\/fr\/vitrine&quot;}" data-drupal-link-system-path="vitrine">fr</a></li></ul>
+      </div>
+
+                        </div>
+            <a href="" class="recherche-desktop"><span class="icon-recherche"></span><span class="icon-close"></span></a>
+        </div>
+    </header>
+    <div class="normes-ul-nav-mobile-wrapper">
+        <nav class="nav-mobile blanc test" style="height: 1169px;">
+        <ul class="menu-principale nav-mobile-content" style="height: 1169px;">
+                <li class="menu-principale-item has-children">
+            <a href="#" target="_self" title="À propos">À propos</a>
+                    <ul class="menu-principale-list is-hidden" id="sub-header-sub-list">
+                        <li class="go-back"><a href="#0">Retour</a></li><li class="current"><a href="#">À propos</a></li><li class="menu-principale-list-item">
+                <a href="/fr/a-propos-de-sentinelle-nord" target="_self" title="La stratégie">La stratégie</a>
+                  <!--
+                                -->
+              </li>
+                        <li class="menu-principale-list-item">
+                <a href="/fr/communaute" target="_self" title="Communauté">Communauté</a>
+                  <!--
+                                    <ul class="menu-principale-list" id="sub-header-sub-list">
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/communaute-sentinelle-nord-listes-du-personnel" target="_self" title="Communauté Sentinelle Nord : listes détaillées">Communauté Sentinelle Nord : listes détaillées</a>
+                              </li>
+                                            </ul>
+                                -->
+              </li>
+                        <li class="menu-principale-list-item">
+                <a href="/fr/communaute/association-etudiante-sentinelle-nord" target="_self" title="Association étudiante">Association étudiante</a>
+                  <!--
+                                -->
+              </li>
+                        <li class="menu-principale-list-item">
+                <a href="/fr/a-propos/gouvernance" target="_self" title="Gouvernance">Gouvernance</a>
+                  <!--
+                                -->
+              </li>
+                        <li class="menu-principale-list-item">
+                <a href="/fr/engagement-edi" target="_self" title="Engagement EDI">Engagement EDI</a>
+                  <!--
+                                -->
+              </li>
+                        <li class="menu-principale-list-item">
+                <a href="/fr/politique-de-libre-acces" target="_self" title="Politique de libre accès">Politique de libre accès</a>
+                  <!--
+                                -->
+              </li>
+                        <li class="menu-principale-list-item">
+                <a href="/fr/code-de-conduite" target="_self" title="Code de conduite">Code de conduite</a>
+                  <!--
+                                -->
+              </li>
+                      </ul>
+                  </li>
+                <li class="menu-principale-item has-children">
+            <a href="#" target="_self" title="Recherche">Recherche</a>
+                    <ul class="menu-principale-list is-hidden" id="sub-header-sub-list">
+                        <li class="go-back"><a href="#0">Retour</a></li><li class="current"><a href="#">Recherche</a></li><li class="menu-principale-list-item">
+                <a href="/fr/recherche" target="_self" title="Programme de recherche">Programme de recherche</a>
+                  <!--
+                                    <ul class="menu-principale-list" id="sub-header-sub-list">
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/recherche/cadre-conceptuel-de-sentinelle-nord" target="_self" title="Cadre conceptuel de Sentinelle Nord">Cadre conceptuel de Sentinelle Nord</a>
+                              </li>
+                                            </ul>
+                                -->
+              </li>
+                        <li class="menu-principale-list-item">
+                <a href="/fr/faits-saillants-recherche" target="_self" title="Faits saillants">Faits saillants</a>
+                  <!--
+                                -->
+              </li>
+                        <li class="menu-principale-list-item">
+                <a href="/fr/projets" target="_self" title="Projets de recherche">Projets de recherche</a>
+                  <!--
+                                    <ul class="menu-principale-list" id="sub-header-sub-list">
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/recherche/application-de-lintelligence-artificielle-lidentification-automatique-de-traits-fonctionnels-du" target="_self" title="Application de l’Intelligence artificielle à l’identification automatique de traits fonctionnels du zooplancton à partir d’images à haute résolution">Application de l’Intelligence artificielle à l’identification automatique de traits fonctionnels du zooplancton à partir d’images à haute résolution</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/projets-de-recherche/bond20-deployer-des-technologies-de-detection-basees-sur-la" target="_self" title="BOND2.0 — Déployer des technologies de détection basées sur la lumière pour le suivi des gaz climatiquement actifs dans l’Arctique en mutation">BOND2.0 — Déployer des technologies de détection basées sur la lumière pour le suivi des gaz climatiquement actifs dans l’Arctique en mutation</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/recherche/batiments-consommation-energetique-nette-zero-dans-le-grand-nord" target="_self" title="Bâtiments à consommation énergétique nette zéro dans le Grand Nord">Bâtiments à consommation énergétique nette zéro dans le Grand Nord</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/recherche/caracterisation-de-la-variabilite-du-champ-lumineux-sous-les-glaces-oceaniques-de-larctique-laide" target="_self" title="Caractérisation de la variabilité du champ lumineux sous les glaces océaniques de l’Arctique à l’aide de véhicules autonomes sous-marins et aériens">Caractérisation de la variabilité du champ lumineux sous les glaces océaniques de l’Arctique à l’aide de véhicules autonomes sous-marins et aériens</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/recherche/caracterisation-des-huiles-essentielles-issues-de-la-nordicite" target="_self" title="Caractérisation des huiles essentielles issues de la Nordicité">Caractérisation des huiles essentielles issues de la Nordicité</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/recherche/comprehension-des-mutations-changeantes-sur-le-developpement-du-microbiome" target="_self" title="Compréhension des mutations changeantes sur le développement du microbiome">Compréhension des mutations changeantes sur le développement du microbiome</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/projets-de-recherche/des-systemes-alimentaires-ruraux-durables-et-resistants-pour-les" target="_self" title="Des systèmes alimentaires ruraux durables et résistants pour les générations futures de Nunavimmiut : promouvoir la sécurité alimentaire tout en s’adaptant aux environnements nordiques en changement">Des systèmes alimentaires ruraux durables et résistants pour les générations futures de Nunavimmiut : promouvoir la sécurité alimentaire tout en s’adaptant aux environnements nordiques en changement</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/projets-de-recherche/design-biophilique-dans-larctique-co-creation-communautaire" target="_self" title="Design biophilique en Arctique: co-création communautaire immersive pour concilier bien-être et performance énergétique dans l&#039;architecture d&#039;Ikaluktutiak">Design biophilique en Arctique: co-création communautaire immersive pour concilier bien-être et performance énergétique dans l&#039;architecture d&#039;Ikaluktutiak</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/recherche/documenter-et-modeliser-les-interrelations-cles-des-systemes-hydriques-nordiques-soumis-aux" target="_self" title="Documenter et modéliser les interrelations clés des systèmes hydriques nordiques soumis aux pressions climatiques, géosystémiques et sociétales">Documenter et modéliser les interrelations clés des systèmes hydriques nordiques soumis aux pressions climatiques, géosystémiques et sociétales</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/recherche/developpement-de-dispositifs-photoniques-pour-la-generation-dimpulsions-lasers-moyen-infrarouge" target="_self" title="Développement de dispositifs photoniques pour la génération d&#039;impulsions lasers moyen infrarouge adaptées à la spectroscopie gazeuse à distance">Développement de dispositifs photoniques pour la génération d&#039;impulsions lasers moyen infrarouge adaptées à la spectroscopie gazeuse à distance</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/projets-de-recherche/developpement-dune-infrastructure-municipale-resiliente-de" target="_self" title="Développement d’une infrastructure municipale résiliente de traitement des eaux usées visant la réutilisation de l’eau au Nunavik (Québec)">Développement d’une infrastructure municipale résiliente de traitement des eaux usées visant la réutilisation de l’eau au Nunavik (Québec)</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/recherche/effet-de-la-lumiere-et-de-la-temperature-sur-lactivite-du-calanus-dans-larctique-calact" target="_self" title="Effet de la lumière et de la température sur l’activité du Calanus dans l’Arctique (CalAct)">Effet de la lumière et de la température sur l’activité du Calanus dans l’Arctique (CalAct)</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/recherche/faire-les-choses-differemment-un-atlas-des-meilleures-pratiques-pour-des-milieux-de-vie-durables" target="_self" title="Faire les choses différemment : un atlas des meilleures pratiques pour des milieux de vie durables et culturellement adaptés au Nunavik">Faire les choses différemment : un atlas des meilleures pratiques pour des milieux de vie durables et culturellement adaptés au Nunavik</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/recherche/indice-de-coloration-rouge-du-calanus-de-lintelligence-artificielle-lanalyse-dimages-cardinal" target="_self" title="Indice de coloration rouge du Calanus, de l’intelligence artificielle à l’analyse d’images (CARDINAL)">Indice de coloration rouge du Calanus, de l’intelligence artificielle à l’analyse d’images (CARDINAL)</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/projets-de-recherche/interactions-entre-lenvironnement-nordique-et-les-chronobiotiques" target="_self" title="Interactions entre l’environnement nordique et les chronobiotiques : Impact sur la santé cardiométabolique et neurométabolique">Interactions entre l’environnement nordique et les chronobiotiques : Impact sur la santé cardiométabolique et neurométabolique</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/projets-de-recherche/laxe-exposome-microbiote-cerveau-sous-le-microscope-pour-aborder" target="_self" title="L’axe exposome-microbiote-cerveau sous le microscope pour aborder les interactions environnement-santé dans le Nord">L’axe exposome-microbiote-cerveau sous le microscope pour aborder les interactions environnement-santé dans le Nord</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/projets-de-recherche/lecogenomique-des-zones-minieres-pour-un-nord-canadien-durable" target="_self" title="L’écogénomique des zones minières pour un Nord canadien durable (GENOSCAN)">L’écogénomique des zones minières pour un Nord canadien durable (GENOSCAN)</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/projets-de-recherche/microbiomes-de-la-derniere-zone-glaciaire-et-sante-de-lecosysteme" target="_self" title="Microbiomes de la dernière zone glaciaire et santé de l’écosystème arctique">Microbiomes de la dernière zone glaciaire et santé de l’écosystème arctique</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/projets-de-recherche/mobilisation-et-transfert-de-connaissances-entre-les-communautes" target="_self" title="Mobilisation et transfert de connaissances entre les communautés nordiques et Sentinelle Nord">Mobilisation et transfert de connaissances entre les communautés nordiques et Sentinelle Nord</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/recherche/melatonine-produite-par-les-pinealocytes-hormone-chronobiotique-modulant-les-effets-de-la" target="_self" title="Mélatonine produite par les pinéalocytes : hormone chronobiotique modulant les effets de la photopériode sur l’homéostasie énergétique et les dysfonctionnements métaboliques">Mélatonine produite par les pinéalocytes : hormone chronobiotique modulant les effets de la photopériode sur l’homéostasie énergétique et les dysfonctionnements métaboliques</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/recherche/qaujikkaut-outil-en-ligne-danticipation-hative-des-evenements-meteorologiques-extremes-au-nunavik" target="_self" title="QAUJIKKAUT : outil en ligne d’anticipation hâtive des événements météorologiques extrêmes au Nunavik">QAUJIKKAUT : outil en ligne d’anticipation hâtive des événements météorologiques extrêmes au Nunavik</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/projets-de-recherche/recherche-interdisciplinaire-pour-comprendre-levolution-de-la-dynamique-du-reseau-alimentaire-et" target="_self" title="Recherche interdisciplinaire pour comprendre l’évolution de la dynamique du réseau alimentaire et les menaces à la sécurité alimentaire dans la forêt boréale du Nord">Recherche interdisciplinaire pour comprendre l’évolution de la dynamique du réseau alimentaire et les menaces à la sécurité alimentaire dans la forêt boréale du Nord</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/recherche/recherche-participative-dirigee-par-des-inuits-sur-la-production-alimentaire-et-la-nutrition-dans" target="_self" title="Recherche participative dirigée par des Inuits sur la production alimentaire et la nutrition dans l’Inuit Nunangat">Recherche participative dirigée par des Inuits sur la production alimentaire et la nutrition dans l’Inuit Nunangat</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/recherche/role-des-horloges-circadiennes-dans-la-synchronisation-saisonniere-dans-larctique" target="_self" title="Rôle des horloges circadiennes dans la synchronisation saisonnière dans l’Arctique">Rôle des horloges circadiennes dans la synchronisation saisonnière dans l’Arctique</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/projets-de-recherche/signatures-biologiques-des-reponses-au-stress-et" target="_self" title="Signatures biologiques des réponses au stress et potentialité d’un régime alimentaire enrichi en acides gras n-3 pour favoriser un état de santé mentale positif malgré l’adversité">Signatures biologiques des réponses au stress et potentialité d’un régime alimentaire enrichi en acides gras n-3 pour favoriser un état de santé mentale positif malgré l’adversité</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/recherche/solutions-technico-sociales-pour-etendre-de-whapmagoostui-kuujjuarapik-lutilisation-des-energies" target="_self" title="Solutions technico-sociales pour étendre, de Whapmagoostui-Kuujjuarapik, l’utilisation des énergies renouvelables vers d’autres régions du Nunavik">Solutions technico-sociales pour étendre, de Whapmagoostui-Kuujjuarapik, l’utilisation des énergies renouvelables vers d’autres régions du Nunavik</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/recherche/systeme-dalerte-precoce-pour-la-gestion-et-la-surveillance-de-leau-potable-par-lanalyse-de" target="_self" title="Système d’alerte précoce pour la gestion et la surveillance de l’eau potable par l’analyse de données environnementales en ligne et en continu (NUNARISK)">Système d’alerte précoce pour la gestion et la surveillance de l’eau potable par l’analyse de données environnementales en ligne et en continu (NUNARISK)</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/projets-de-recherche/tininnimiutait-evaluer-le-potentiel-des-aliments-marins-locaux" target="_self" title="Tininnimiutait : Évaluer le potentiel des aliments marins locaux accessibles depuis le littoral pour accroître la sécurité alimentaire et la souveraineté au Nunavik">Tininnimiutait : Évaluer le potentiel des aliments marins locaux accessibles depuis le littoral pour accroître la sécurité alimentaire et la souveraineté au Nunavik</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/projets-de-recherche/un-reseau-de-capteurs-autonomes-pour-le-suivi-des-animaux-de" target="_self" title="Un réseau de capteurs autonomes pour le suivi des animaux de l’Arctique et des changements environnementaux grâce à des approches informatiques avancées">Un réseau de capteurs autonomes pour le suivi des animaux de l’Arctique et des changements environnementaux grâce à des approches informatiques avancées</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/projets-de-recherche/zoom-extreme-sur-la-permeabilite-intestinale-et-le-regime" target="_self" title="Zoom extrême sur la perméabilité intestinale et le régime alimentaire occidental : Élucider le rôle des antigènes alimentaires sur la prévalence des maladies cardiométaboliques et mentales dans le Nord">Zoom extrême sur la perméabilité intestinale et le régime alimentaire occidental : Élucider le rôle des antigènes alimentaires sur la prévalence des maladies cardiométaboliques et mentales dans le Nord</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/recherche/elucider-les-interactions-microbiote-hote-presentes-dans-les-maladies-cardiometaboliques" target="_self" title="Élucider les interactions microbiote-hôte présentes dans les maladies cardiométaboliques et mentales à l&#039;aide de capteurs optiques multimodaux novateurs">Élucider les interactions microbiote-hôte présentes dans les maladies cardiométaboliques et mentales à l&#039;aide de capteurs optiques multimodaux novateurs</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/recherche/elucider-les-liens-entre-lenvironnement-marin-et-les-qualites-nutritives-du-beluga-et-des" target="_self" title="Élucider les liens entre l’environnement marin et les qualités nutritives du béluga et des bivalves à Quaqtaq">Élucider les liens entre l’environnement marin et les qualités nutritives du béluga et des bivalves à Quaqtaq</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/recherche/evaluation-des-risques-emergents-pour-la-sante-des-populations-humaines-circumpolaires-dans" target="_self" title="Évaluation des risques émergents pour la santé des populations humaines circumpolaires dans l’Arctique (SEARCH)">Évaluation des risques émergents pour la santé des populations humaines circumpolaires dans l’Arctique (SEARCH)</a>
+                              </li>
+                                            </ul>
+                                -->
+              </li>
+                        <li class="menu-principale-list-item">
+                <a href="/fr/recherche/chaires-de-recherche" target="_self" title="Chaires de recherche">Chaires de recherche</a>
+                  <!--
+                                -->
+              </li>
+                        <li class="menu-principale-list-item">
+                <a href="/fr/partenariats-collaborations" target="_self" title="Partenariats et collaborations">Partenariats et collaborations</a>
+                  <!--
+                                -->
+              </li>
+                        <li class="menu-principale-list-item">
+                <a href="/fr/unites-mixtes-internationales" target="_self" title="Unités mixtes internationales">Unités mixtes internationales</a>
+                  <!--
+                                -->
+              </li>
+                        <li class="menu-principale-list-item">
+                <a href="/fr/interdisciplinarite" target="_self" title="Note sur l'interdisciplinarité">Note sur l'interdisciplinarité</a>
+                  <!--
+                                -->
+              </li>
+                      </ul>
+                  </li>
+                <li class="menu-principale-item has-children">
+            <a href="#" target="_self" title="Formation">Formation</a>
+                    <ul class="menu-principale-list is-hidden" id="sub-header-sub-list">
+                        <li class="go-back"><a href="#0">Retour</a></li><li class="current"><a href="#">Formation</a></li><li class="menu-principale-list-item">
+                <a href="/fr/formation" target="_self" title="Programmes de formation">Programmes de formation</a>
+                  <!--
+                                -->
+              </li>
+                        <li class="menu-principale-list-item">
+                <a href="/fr/bourses" target="_self" title="Bourses d'excellence">Bourses d'excellence</a>
+                  <!--
+                                    <ul class="menu-principale-list" id="sub-header-sub-list">
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/formation/bourses-de-maitrise" target="_self" title="Bourses de maîtrise">Bourses de maîtrise</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/formation/bourses-doctorales" target="_self" title="Bourses doctorales">Bourses doctorales</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/formation/bourses-postdoctorales" target="_self" title="Postdoctoral Fellowships">Postdoctoral Fellowships</a>
+                              </li>
+                                            </ul>
+                                -->
+              </li>
+                        <li class="menu-principale-list-item">
+                <a href="/fr/formation/bourses-de-soutien-la-mobilite-etudiante" target="_self" title="Mobilité internationale">Mobilité internationale</a>
+                  <!--
+                                    <ul class="menu-principale-list" id="sub-header-sub-list">
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/formation/bourses-de-stage-pour-etudiants-ul" target="_self" title="Bourses de stage pour étudiants UL">Bourses de stage pour étudiants UL</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/formation/bourses-de-stage-pour-etudiants-etrangers" target="_self" title="Bourses de stage pour étudiants étrangers">Bourses de stage pour étudiants étrangers</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/formation/fonds-dacces-des-formations-de-courte-duree" target="_self" title="Fonds d&#039;accès à des formations de courte durée">Fonds d&#039;accès à des formations de courte durée</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/formation/fonds-de-soutien-postdoc" target="_self" title="Fonds de soutien à la mobilité des stagiaires postdoctoraux">Fonds de soutien à la mobilité des stagiaires postdoctoraux</a>
+                              </li>
+                                            </ul>
+                                -->
+              </li>
+                        <li class="menu-principale-list-item">
+                <a href="/fr/formation/activites-experientielles" target="_self" title="Activités expérientielles">Activités expérientielles</a>
+                  <!--
+                                    <ul class="menu-principale-list" id="sub-header-sub-list">
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/smaart2020" target="_self" title="Bootcamp : Acquisition et traitement de données : du capteur à l&#039;information">Bootcamp : Acquisition et traitement de données : du capteur à l&#039;information</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/smaart2019" target="_self" title="Bootcamp : du développement au déploiement d’un outil optique en milieu nordique">Bootcamp : du développement au déploiement d’un outil optique en milieu nordique</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/ingenieriepergelisol2019" target="_self" title="Ingénierie  du pergélisol appliquée aux infrastructures de transport">Ingénierie  du pergélisol appliquée aux infrastructures de transport</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/reseauxcomplexes2018" target="_self" title="Les réseaux du Nord : structure et fonction">Les réseaux du Nord : structure et fonction</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/reseauxcomplexes2019" target="_self" title="Les réseaux du Nord: Structure et fonction 2019">Les réseaux du Nord: Structure et fonction 2019</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/microbiomes2019" target="_self" title="Microbiomes arctiques: molécules, microbes, écosystèmes et santé">Microbiomes arctiques: molécules, microbes, écosystèmes et santé</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/nordicite2022" target="_self" title="Nordicité et avancées en science des produits naturels">Nordicité et avancées en science des produits naturels</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/baffin2018" target="_self" title="Shedding Light on Arctic marine ecosystem services">Shedding Light on Arctic marine ecosystem services</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/formation/une-cryosphere-en-changement-des-capteurs-la-prise-de-decisions" target="_self" title="Une cryosphère en changement: des capteurs à la prise de décisions">Une cryosphère en changement: des capteurs à la prise de décisions</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/formation/ecoles-doctorales-internationales/ecole-internationale-sur-les-reseaux-complexes" target="_self" title="ÉCOLE INTERNATIONALE SUR LES RÉSEAUX COMPLEXES">ÉCOLE INTERNATIONALE SUR LES RÉSEAUX COMPLEXES</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/ecologie2023" target="_self" title="École doctorale internationale en écologie computationnelle">École doctorale internationale en écologie computationnelle</a>
+                              </li>
+                                            </ul>
+                                -->
+              </li>
+                        <li class="menu-principale-list-item">
+                <a href="/fr/ateliers" target="_self" title="Ateliers de formation">Ateliers de formation</a>
+                  <!--
+                                    <ul class="menu-principale-list" id="sub-header-sub-list">
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/formation/ateliers-de-formation/atelier-de-communication-scientifique" target="_self" title="Atelier de communication scientifique">Atelier de communication scientifique</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/collaboUL" target="_self" title="Atelier sur la collaboration interdisciplinaire">Atelier sur la collaboration interdisciplinaire</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/ateliers-de-formation/atelier-sur-la-collaboration-interdisciplinaire" target="_self" title="Atelier sur la collaboration interdisciplinaire">Atelier sur la collaboration interdisciplinaire</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/ateliers-de-redaction-scientifique" target="_self" title="Ateliers de rédaction scientifique">Ateliers de rédaction scientifique</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/formation/ateliers-de-formation/communication-orale-en-recherche-MT180" target="_self" title="Communication orale en recherche : 180 secondes pour marquer les esprits">Communication orale en recherche : 180 secondes pour marquer les esprits</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/communications-productives-en-equipe-interdisciplinaire" target="_self" title="Communications productives en équipe interdisciplinaire">Communications productives en équipe interdisciplinaire</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/concevoir-sa-strategie-de-financement-en-recherche" target="_self" title="Concevoir sa stratégie de financement en recherche : par où commencer?">Concevoir sa stratégie de financement en recherche : par où commencer?</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/formation/ateliers-de-formation/creer-des-visuels-dimpact-atelier-dinitiation-au-design-graphique" target="_self" title="Créer des visuels d&#039;impact : atelier d&#039;initiation au design graphique pour scientifiques">Créer des visuels d&#039;impact : atelier d&#039;initiation au design graphique pour scientifiques</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/design-ta-science" target="_self" title="Design ta science!">Design ta science!</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/formation/ateliers-de-formation/environnements-de-recherche-inclusifs-et-innovants-en-contexte" target="_self" title="Environnements de recherche inclusifs et innovants en contexte d’interdisciplinarité">Environnements de recherche inclusifs et innovants en contexte d’interdisciplinarité</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/visualisation-des-donnees-en-recherche" target="_self" title="Faites parler vos données : initiation à la visualisation des données en recherche">Faites parler vos données : initiation à la visualisation des données en recherche</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/financer-la-recherche-relever-le-defi-dune-premiere-demande-de-subvention" target="_self" title="Financer la recherche : Relever le défi d’une première demande de subvention">Financer la recherche : Relever le défi d’une première demande de subvention</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/formation/ateliers-de-formation/formation-intensive-recherche-action-et-mobilisation-en-contexte" target="_self" title="Formation intensive : Recherche-action et mobilisation en contexte autochtone">Formation intensive : Recherche-action et mobilisation en contexte autochtone</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/formation/ateliers-de-formation/integration-des-savoirs-autochtones-en-recherche" target="_self" title="Intégration des savoirs autochtones en recherche">Intégration des savoirs autochtones en recherche</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/formation/ateliers-de-formation/laffiche-scientifique-maximiser-impact" target="_self" title="L&#039;affiche scientifique : apprivoiser le média pour tirer le maximum de son expérience">L&#039;affiche scientifique : apprivoiser le média pour tirer le maximum de son expérience</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/la-gestion-de-projet-dans-un-contexte-de-recherche-et-dinnovation" target="_self" title="La gestion de projet dans un contexte de recherche et d’innovation">La gestion de projet dans un contexte de recherche et d’innovation</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/medias-sociaux-et-recherche" target="_self" title="Médias sociaux et recherche : bien se préparer avant de se lancer">Médias sociaux et recherche : bien se préparer avant de se lancer</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/science-ouverte-et-pandemie" target="_self" title="Science ouverte et pandémie : ce que la situation actuelle nous révèle">Science ouverte et pandémie : ce que la situation actuelle nous révèle</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/formation/ateliers-de-formation/valoriser-votre-recherche-grace-aux-medias" target="_self" title="Valoriser votre recherche grâce aux médias">Valoriser votre recherche grâce aux médias</a>
+                              </li>
+                                            </ul>
+                                -->
+              </li>
+                        <li class="menu-principale-list-item">
+                <a href="/fr/communaute/laureats-des-bourses-dexcellence-sentinelle-nord" target="_self" title="Boursiers d'excellence">Boursiers d'excellence</a>
+                  <!--
+                                -->
+              </li>
+                      </ul>
+                  </li>
+                <li class="menu-principale-item has-children">
+            <a href="#" target="_self" title="Innovation">Innovation</a>
+                    <ul class="menu-principale-list is-hidden" id="sub-header-sub-list">
+                        <li class="go-back"><a href="#0">Retour</a></li><li class="current"><a href="#">Innovation</a></li><li class="menu-principale-list-item">
+                <a href="/fr/innovation" target="_self" title="Un réseau pour l'innovation">Un réseau pour l'innovation</a>
+                  <!--
+                                -->
+              </li>
+                        <li class="menu-principale-list-item">
+                <a href="/fr/recherche/plateforme-technologique-de-developpement-dinstruments" target="_self" title="Plateforme technologique">Plateforme technologique</a>
+                  <!--
+                                -->
+              </li>
+                        <li class="menu-principale-list-item">
+                <a href="/fr/recherche/fonds-de-maturation" target="_self" title="Fonds de maturation">Fonds de maturation</a>
+                  <!--
+                                -->
+              </li>
+                      </ul>
+                  </li>
+                <li class="menu-principale-item has-children">
+            <a href="#" target="_self" title="Communication">Communication</a>
+                    <ul class="menu-principale-list is-hidden" id="sub-header-sub-list">
+                        <li class="go-back"><a href="#0">Retour</a></li><li class="current"><a href="#">Communication</a></li><li class="menu-principale-list-item">
+                <a href="/fr/communication-rayonnement" target="_self" title="Communication et rayonnement">Communication et rayonnement</a>
+                  <!--
+                                    <ul class="menu-principale-list" id="sub-header-sub-list">
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/conferences-scientifiques-2021" target="_self" title="Conférences scientifiques">Conférences scientifiques</a>
+                              </li>
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/inuits-et-scientifiques-sattaquent-aux-PFAS" target="_self" title="Inuits et scientifiques s&#039;attaquent aux polluants éternels">Inuits et scientifiques s&#039;attaquent aux polluants éternels</a>
+                              </li>
+                                            </ul>
+                                -->
+              </li>
+                        <li class="menu-principale-list-item">
+                <a href="/fr/reunion-scientifique" target="_self" title="Réunion scientifique">Réunion scientifique</a>
+                  <!--
+                                    <ul class="menu-principale-list" id="sub-header-sub-list">
+                                                    <li class="menu-principale-list-item">
+                                  <a href="#/fr/reunion-scientifique-2022" target="_self" title="Réunion scientifique 2022">Réunion scientifique 2022</a>
+                              </li>
+                                            </ul>
+                                -->
+              </li>
+                        <li class="menu-principale-list-item">
+                <a href="/fr/publications" target="_self" title="Publications">Publications</a>
+                  <!--
+                                -->
+              </li>
+                        <li class="menu-principale-list-item">
+                <a href="/fr/communication/rapport-dactivites" target="_self" title="Rapport d'activités">Rapport d'activités</a>
+                  <!--
+                                -->
+              </li>
+                        <li class="menu-principale-list-item">
+                <a href="/fr/communication/outils-communication-visuelle" target="_self" title="Outils et identité visuelle">Outils et identité visuelle</a>
+                  <!--
+                                -->
+              </li>
+                        <li class="menu-principale-list-item">
+                <a href="/fr/actualites" target="_self" title="Actualités">Actualités</a>
+                  <!--
+                                -->
+              </li>
+                      </ul>
+                  </li>
+                <li class="menu-principale-item has-children dernier-item-principal">
+            <a href="#" target="_self" title="Opportunités">Opportunités</a>
+                    <ul class="menu-principale-list is-hidden" id="sub-header-sub-list">
+                        <li class="go-back"><a href="#0">Retour</a></li><li class="current"><a href="#">Opportunités</a></li><li class="menu-principale-list-item">
+                <a href="/fr/concours-et-opportunites" target="_self" title="Concours et opportunités">Concours et opportunités</a>
+                  <!--
+                                -->
+              </li>
+                        <li class="menu-principale-list-item">
+                <a href="/fr/opportunites-projets-de-recherche" target="_self" title="Offres de projets de recherche">Offres de projets de recherche</a>
+                  <!--
+                                -->
+              </li>
+                        <li class="menu-principale-list-item">
+                <a href="/fr/fonds-dauteur-sentinelle-nord" target="_self" title="Fonds d’auteur">Fonds d’auteur</a>
+                  <!--
+                                -->
+              </li>
+                        <li class="menu-principale-list-item">
+                <a href="/fr/recherche/fonds-dacces-aux-infrastructures-nordiques" target="_self" title="Accès aux infrastructures nordiques">Accès aux infrastructures nordiques</a>
+                  <!--
+                                -->
+              </li>
+                        <li class="menu-principale-list-item">
+                <a href="/fr/defi-idees-mobilisation-des-connaissances" target="_self" title="Défi d'idées : mobilisation des connaissances">Défi d'idées : mobilisation des connaissances</a>
+                  <!--
+                                -->
+              </li>
+                      </ul>
+                  </li><li class="nav-mobile-recherche" role="search"><form method="get" action="./cse"><input type="search" value="" title="Rechercher" name="cgse"><button type="submit" value="Chercher"><span class="icon-recherche"></span></button></form><div class="switch-langue">
+                 <div class="language-switcher-language-url" id="block-lang-switch" role="navigation">
+
+
+          <ul class="links"><li class="go-back"><a href="#0">Retour</a></li><li class="current"><a href="undefined"></a></li><li hreflang="en" data-drupal-link-query="{&quot;Q&quot;:&quot;\/fr\/vitrine&quot;}" data-drupal-link-system-path="vitrine"><a href="/en/vitrine?Q=/fr/vitrine" class="language-link" hreflang="en" data-drupal-link-query="{&quot;Q&quot;:&quot;\/fr\/vitrine&quot;}" data-drupal-link-system-path="vitrine">en</a></li><li hreflang="fr" data-drupal-link-query="{&quot;Q&quot;:&quot;\/fr\/vitrine&quot;}" data-drupal-link-system-path="vitrine" class="is-active"><a href="/fr/vitrine?Q=/fr/vitrine" class="language-link is-active" style="display:none;" hreflang="fr" data-drupal-link-query="{&quot;Q&quot;:&quot;\/fr\/vitrine&quot;}" data-drupal-link-system-path="vitrine">fr</a></li></ul>
+      </div>
+
+                        </div></li><li class="section_32669 gauche general">
+                        <a href="/fr/a-propos-de-sentinelle-nord" target="_self">
+                            À propos                    </a>
+                    </li><li class="section_32671 droite general">
+                        <a href="/fr/nous-joindre" target="_self">
+                            Nous joindre                    </a>
+                    </li>
+                    </ul></nav>
+    </div>
+    <div id="section-recherche" class="normes-ul-recherche" role="search" style="">
+        <div style="" id="" class=" co-n2">
+            <div class="csc-default">
+                <form method="get" action="./cse" id="formulaireRechercheEntete">
+                    <input id="cse-input" type="search" placeholder="Que cherchez-vous?" name="cgse" value="" class="champ-recherche">
+                    <button type="submit" class="btn-recherche" value=""><span class="icon-recherche"></span></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <nav class="normes-ul-navigation-principale pleine-largeur sn-sub-header-gris alignement-items-justifie">
+        <div>
+
+          <ul class="menu-principale">
+                  <li class="menu-principale-item">
+              <a href="#" target="_self" title="À propos"><span>À propos</span></a>
+                      <ul class="menu-principale-list" id="sub-header-sub-list">
+                          <li class="menu-principale-list-item">
+                  <a href="/fr/a-propos-de-sentinelle-nord" target="_self" title="La stratégie"><span>La stratégie</span></a>
+                    <!--
+                                  -->
+                </li>
+                          <li class="menu-principale-list-item">
+                  <a href="/fr/communaute" target="_self" title="Communauté"><span>Communauté</span></a>
+                    <!--
+                                      <ul class="menu-principale-list" id="sub-header-sub-list">
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/communaute-sentinelle-nord-listes-du-personnel" target="_self" title="Communauté Sentinelle Nord : listes détaillées">Communauté Sentinelle Nord : listes détaillées</a>
+                                </li>
+                                              </ul>
+                                  -->
+                </li>
+                          <li class="menu-principale-list-item">
+                  <a href="/fr/communaute/association-etudiante-sentinelle-nord" target="_self" title="Association étudiante"><span>Association étudiante</span></a>
+                    <!--
+                                  -->
+                </li>
+                          <li class="menu-principale-list-item">
+                  <a href="/fr/a-propos/gouvernance" target="_self" title="Gouvernance"><span>Gouvernance</span></a>
+                    <!--
+                                  -->
+                </li>
+                          <li class="menu-principale-list-item">
+                  <a href="/fr/engagement-edi" target="_self" title="Engagement EDI"><span>Engagement EDI</span></a>
+                    <!--
+                                  -->
+                </li>
+                          <li class="menu-principale-list-item">
+                  <a href="/fr/politique-de-libre-acces" target="_self" title="Politique de libre accès"><span>Politique de libre accès</span></a>
+                    <!--
+                                  -->
+                </li>
+                          <li class="menu-principale-list-item">
+                  <a href="/fr/code-de-conduite" target="_self" title="Code de conduite"><span>Code de conduite</span></a>
+                    <!--
+                                  -->
+                </li>
+                        </ul>
+                    </li>
+                  <li class="menu-principale-item">
+              <a href="#" target="_self" title="Recherche"><span>Recherche</span></a>
+                      <ul class="menu-principale-list" id="sub-header-sub-list">
+                          <li class="menu-principale-list-item">
+                  <a href="/fr/recherche" target="_self" title="Programme de recherche"><span>Programme de recherche</span></a>
+                    <!--
+                                      <ul class="menu-principale-list" id="sub-header-sub-list">
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/recherche/cadre-conceptuel-de-sentinelle-nord" target="_self" title="Cadre conceptuel de Sentinelle Nord">Cadre conceptuel de Sentinelle Nord</a>
+                                </li>
+                                              </ul>
+                                  -->
+                </li>
+                          <li class="menu-principale-list-item">
+                  <a href="/fr/faits-saillants-recherche" target="_self" title="Faits saillants"><span>Faits saillants</span></a>
+                    <!--
+                                  -->
+                </li>
+                          <li class="menu-principale-list-item">
+                  <a href="/fr/projets" target="_self" title="Projets de recherche"><span>Projets de recherche</span></a>
+                    <!--
+                                      <ul class="menu-principale-list" id="sub-header-sub-list">
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/recherche/application-de-lintelligence-artificielle-lidentification-automatique-de-traits-fonctionnels-du" target="_self" title="Application de l’Intelligence artificielle à l’identification automatique de traits fonctionnels du zooplancton à partir d’images à haute résolution">Application de l’Intelligence artificielle à l’identification automatique de traits fonctionnels du zooplancton à partir d’images à haute résolution</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/projets-de-recherche/bond20-deployer-des-technologies-de-detection-basees-sur-la" target="_self" title="BOND2.0 — Déployer des technologies de détection basées sur la lumière pour le suivi des gaz climatiquement actifs dans l’Arctique en mutation">BOND2.0 — Déployer des technologies de détection basées sur la lumière pour le suivi des gaz climatiquement actifs dans l’Arctique en mutation</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/recherche/batiments-consommation-energetique-nette-zero-dans-le-grand-nord" target="_self" title="Bâtiments à consommation énergétique nette zéro dans le Grand Nord">Bâtiments à consommation énergétique nette zéro dans le Grand Nord</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/recherche/caracterisation-de-la-variabilite-du-champ-lumineux-sous-les-glaces-oceaniques-de-larctique-laide" target="_self" title="Caractérisation de la variabilité du champ lumineux sous les glaces océaniques de l’Arctique à l’aide de véhicules autonomes sous-marins et aériens">Caractérisation de la variabilité du champ lumineux sous les glaces océaniques de l’Arctique à l’aide de véhicules autonomes sous-marins et aériens</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/recherche/caracterisation-des-huiles-essentielles-issues-de-la-nordicite" target="_self" title="Caractérisation des huiles essentielles issues de la Nordicité">Caractérisation des huiles essentielles issues de la Nordicité</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/recherche/comprehension-des-mutations-changeantes-sur-le-developpement-du-microbiome" target="_self" title="Compréhension des mutations changeantes sur le développement du microbiome">Compréhension des mutations changeantes sur le développement du microbiome</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/projets-de-recherche/des-systemes-alimentaires-ruraux-durables-et-resistants-pour-les" target="_self" title="Des systèmes alimentaires ruraux durables et résistants pour les générations futures de Nunavimmiut : promouvoir la sécurité alimentaire tout en s’adaptant aux environnements nordiques en changement">Des systèmes alimentaires ruraux durables et résistants pour les générations futures de Nunavimmiut : promouvoir la sécurité alimentaire tout en s’adaptant aux environnements nordiques en changement</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/projets-de-recherche/design-biophilique-dans-larctique-co-creation-communautaire" target="_self" title="Design biophilique en Arctique: co-création communautaire immersive pour concilier bien-être et performance énergétique dans l&#039;architecture d&#039;Ikaluktutiak">Design biophilique en Arctique: co-création communautaire immersive pour concilier bien-être et performance énergétique dans l&#039;architecture d&#039;Ikaluktutiak</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/recherche/documenter-et-modeliser-les-interrelations-cles-des-systemes-hydriques-nordiques-soumis-aux" target="_self" title="Documenter et modéliser les interrelations clés des systèmes hydriques nordiques soumis aux pressions climatiques, géosystémiques et sociétales">Documenter et modéliser les interrelations clés des systèmes hydriques nordiques soumis aux pressions climatiques, géosystémiques et sociétales</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/recherche/developpement-de-dispositifs-photoniques-pour-la-generation-dimpulsions-lasers-moyen-infrarouge" target="_self" title="Développement de dispositifs photoniques pour la génération d&#039;impulsions lasers moyen infrarouge adaptées à la spectroscopie gazeuse à distance">Développement de dispositifs photoniques pour la génération d&#039;impulsions lasers moyen infrarouge adaptées à la spectroscopie gazeuse à distance</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/projets-de-recherche/developpement-dune-infrastructure-municipale-resiliente-de" target="_self" title="Développement d’une infrastructure municipale résiliente de traitement des eaux usées visant la réutilisation de l’eau au Nunavik (Québec)">Développement d’une infrastructure municipale résiliente de traitement des eaux usées visant la réutilisation de l’eau au Nunavik (Québec)</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/recherche/effet-de-la-lumiere-et-de-la-temperature-sur-lactivite-du-calanus-dans-larctique-calact" target="_self" title="Effet de la lumière et de la température sur l’activité du Calanus dans l’Arctique (CalAct)">Effet de la lumière et de la température sur l’activité du Calanus dans l’Arctique (CalAct)</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/recherche/faire-les-choses-differemment-un-atlas-des-meilleures-pratiques-pour-des-milieux-de-vie-durables" target="_self" title="Faire les choses différemment : un atlas des meilleures pratiques pour des milieux de vie durables et culturellement adaptés au Nunavik">Faire les choses différemment : un atlas des meilleures pratiques pour des milieux de vie durables et culturellement adaptés au Nunavik</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/recherche/indice-de-coloration-rouge-du-calanus-de-lintelligence-artificielle-lanalyse-dimages-cardinal" target="_self" title="Indice de coloration rouge du Calanus, de l’intelligence artificielle à l’analyse d’images (CARDINAL)">Indice de coloration rouge du Calanus, de l’intelligence artificielle à l’analyse d’images (CARDINAL)</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/projets-de-recherche/interactions-entre-lenvironnement-nordique-et-les-chronobiotiques" target="_self" title="Interactions entre l’environnement nordique et les chronobiotiques : Impact sur la santé cardiométabolique et neurométabolique">Interactions entre l’environnement nordique et les chronobiotiques : Impact sur la santé cardiométabolique et neurométabolique</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/projets-de-recherche/laxe-exposome-microbiote-cerveau-sous-le-microscope-pour-aborder" target="_self" title="L’axe exposome-microbiote-cerveau sous le microscope pour aborder les interactions environnement-santé dans le Nord">L’axe exposome-microbiote-cerveau sous le microscope pour aborder les interactions environnement-santé dans le Nord</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/projets-de-recherche/lecogenomique-des-zones-minieres-pour-un-nord-canadien-durable" target="_self" title="L’écogénomique des zones minières pour un Nord canadien durable (GENOSCAN)">L’écogénomique des zones minières pour un Nord canadien durable (GENOSCAN)</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/projets-de-recherche/microbiomes-de-la-derniere-zone-glaciaire-et-sante-de-lecosysteme" target="_self" title="Microbiomes de la dernière zone glaciaire et santé de l’écosystème arctique">Microbiomes de la dernière zone glaciaire et santé de l’écosystème arctique</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/projets-de-recherche/mobilisation-et-transfert-de-connaissances-entre-les-communautes" target="_self" title="Mobilisation et transfert de connaissances entre les communautés nordiques et Sentinelle Nord">Mobilisation et transfert de connaissances entre les communautés nordiques et Sentinelle Nord</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/recherche/melatonine-produite-par-les-pinealocytes-hormone-chronobiotique-modulant-les-effets-de-la" target="_self" title="Mélatonine produite par les pinéalocytes : hormone chronobiotique modulant les effets de la photopériode sur l’homéostasie énergétique et les dysfonctionnements métaboliques">Mélatonine produite par les pinéalocytes : hormone chronobiotique modulant les effets de la photopériode sur l’homéostasie énergétique et les dysfonctionnements métaboliques</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/recherche/qaujikkaut-outil-en-ligne-danticipation-hative-des-evenements-meteorologiques-extremes-au-nunavik" target="_self" title="QAUJIKKAUT : outil en ligne d’anticipation hâtive des événements météorologiques extrêmes au Nunavik">QAUJIKKAUT : outil en ligne d’anticipation hâtive des événements météorologiques extrêmes au Nunavik</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/projets-de-recherche/recherche-interdisciplinaire-pour-comprendre-levolution-de-la-dynamique-du-reseau-alimentaire-et" target="_self" title="Recherche interdisciplinaire pour comprendre l’évolution de la dynamique du réseau alimentaire et les menaces à la sécurité alimentaire dans la forêt boréale du Nord">Recherche interdisciplinaire pour comprendre l’évolution de la dynamique du réseau alimentaire et les menaces à la sécurité alimentaire dans la forêt boréale du Nord</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/recherche/recherche-participative-dirigee-par-des-inuits-sur-la-production-alimentaire-et-la-nutrition-dans" target="_self" title="Recherche participative dirigée par des Inuits sur la production alimentaire et la nutrition dans l’Inuit Nunangat">Recherche participative dirigée par des Inuits sur la production alimentaire et la nutrition dans l’Inuit Nunangat</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/recherche/role-des-horloges-circadiennes-dans-la-synchronisation-saisonniere-dans-larctique" target="_self" title="Rôle des horloges circadiennes dans la synchronisation saisonnière dans l’Arctique">Rôle des horloges circadiennes dans la synchronisation saisonnière dans l’Arctique</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/projets-de-recherche/signatures-biologiques-des-reponses-au-stress-et" target="_self" title="Signatures biologiques des réponses au stress et potentialité d’un régime alimentaire enrichi en acides gras n-3 pour favoriser un état de santé mentale positif malgré l’adversité">Signatures biologiques des réponses au stress et potentialité d’un régime alimentaire enrichi en acides gras n-3 pour favoriser un état de santé mentale positif malgré l’adversité</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/recherche/solutions-technico-sociales-pour-etendre-de-whapmagoostui-kuujjuarapik-lutilisation-des-energies" target="_self" title="Solutions technico-sociales pour étendre, de Whapmagoostui-Kuujjuarapik, l’utilisation des énergies renouvelables vers d’autres régions du Nunavik">Solutions technico-sociales pour étendre, de Whapmagoostui-Kuujjuarapik, l’utilisation des énergies renouvelables vers d’autres régions du Nunavik</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/recherche/systeme-dalerte-precoce-pour-la-gestion-et-la-surveillance-de-leau-potable-par-lanalyse-de" target="_self" title="Système d’alerte précoce pour la gestion et la surveillance de l’eau potable par l’analyse de données environnementales en ligne et en continu (NUNARISK)">Système d’alerte précoce pour la gestion et la surveillance de l’eau potable par l’analyse de données environnementales en ligne et en continu (NUNARISK)</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/projets-de-recherche/tininnimiutait-evaluer-le-potentiel-des-aliments-marins-locaux" target="_self" title="Tininnimiutait : Évaluer le potentiel des aliments marins locaux accessibles depuis le littoral pour accroître la sécurité alimentaire et la souveraineté au Nunavik">Tininnimiutait : Évaluer le potentiel des aliments marins locaux accessibles depuis le littoral pour accroître la sécurité alimentaire et la souveraineté au Nunavik</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/projets-de-recherche/un-reseau-de-capteurs-autonomes-pour-le-suivi-des-animaux-de" target="_self" title="Un réseau de capteurs autonomes pour le suivi des animaux de l’Arctique et des changements environnementaux grâce à des approches informatiques avancées">Un réseau de capteurs autonomes pour le suivi des animaux de l’Arctique et des changements environnementaux grâce à des approches informatiques avancées</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/projets-de-recherche/zoom-extreme-sur-la-permeabilite-intestinale-et-le-regime" target="_self" title="Zoom extrême sur la perméabilité intestinale et le régime alimentaire occidental : Élucider le rôle des antigènes alimentaires sur la prévalence des maladies cardiométaboliques et mentales dans le Nord">Zoom extrême sur la perméabilité intestinale et le régime alimentaire occidental : Élucider le rôle des antigènes alimentaires sur la prévalence des maladies cardiométaboliques et mentales dans le Nord</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/recherche/elucider-les-interactions-microbiote-hote-presentes-dans-les-maladies-cardiometaboliques" target="_self" title="Élucider les interactions microbiote-hôte présentes dans les maladies cardiométaboliques et mentales à l&#039;aide de capteurs optiques multimodaux novateurs">Élucider les interactions microbiote-hôte présentes dans les maladies cardiométaboliques et mentales à l&#039;aide de capteurs optiques multimodaux novateurs</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/recherche/elucider-les-liens-entre-lenvironnement-marin-et-les-qualites-nutritives-du-beluga-et-des" target="_self" title="Élucider les liens entre l’environnement marin et les qualités nutritives du béluga et des bivalves à Quaqtaq">Élucider les liens entre l’environnement marin et les qualités nutritives du béluga et des bivalves à Quaqtaq</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/recherche/evaluation-des-risques-emergents-pour-la-sante-des-populations-humaines-circumpolaires-dans" target="_self" title="Évaluation des risques émergents pour la santé des populations humaines circumpolaires dans l’Arctique (SEARCH)">Évaluation des risques émergents pour la santé des populations humaines circumpolaires dans l’Arctique (SEARCH)</a>
+                                </li>
+                                              </ul>
+                                  -->
+                </li>
+                          <li class="menu-principale-list-item">
+                  <a href="/fr/recherche/chaires-de-recherche" target="_self" title="Chaires de recherche"><span>Chaires de recherche</span></a>
+                    <!--
+                                  -->
+                </li>
+                          <li class="menu-principale-list-item">
+                  <a href="/fr/partenariats-collaborations" target="_self" title="Partenariats et collaborations"><span>Partenariats et collaborations</span></a>
+                    <!--
+                                  -->
+                </li>
+                          <li class="menu-principale-list-item">
+                  <a href="/fr/unites-mixtes-internationales" target="_self" title="Unités mixtes internationales"><span>Unités mixtes internationales</span></a>
+                    <!--
+                                  -->
+                </li>
+                          <li class="menu-principale-list-item">
+                  <a href="/fr/interdisciplinarite" target="_self" title="Note sur l'interdisciplinarité"><span>Note sur l'interdisciplinarité</span></a>
+                    <!--
+                                  -->
+                </li>
+                        </ul>
+                    </li>
+                  <li class="menu-principale-item">
+              <a href="#" target="_self" title="Formation"><span>Formation</span></a>
+                      <ul class="menu-principale-list" id="sub-header-sub-list">
+                          <li class="menu-principale-list-item">
+                  <a href="/fr/formation" target="_self" title="Programmes de formation"><span>Programmes de formation</span></a>
+                    <!--
+                                  -->
+                </li>
+                          <li class="menu-principale-list-item">
+                  <a href="/fr/bourses" target="_self" title="Bourses d'excellence"><span>Bourses d'excellence</span></a>
+                    <!--
+                                      <ul class="menu-principale-list" id="sub-header-sub-list">
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/formation/bourses-de-maitrise" target="_self" title="Bourses de maîtrise">Bourses de maîtrise</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/formation/bourses-doctorales" target="_self" title="Bourses doctorales">Bourses doctorales</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/formation/bourses-postdoctorales" target="_self" title="Postdoctoral Fellowships">Postdoctoral Fellowships</a>
+                                </li>
+                                              </ul>
+                                  -->
+                </li>
+                          <li class="menu-principale-list-item">
+                  <a href="/fr/formation/bourses-de-soutien-la-mobilite-etudiante" target="_self" title="Mobilité internationale"><span>Mobilité internationale</span></a>
+                    <!--
+                                      <ul class="menu-principale-list" id="sub-header-sub-list">
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/formation/bourses-de-stage-pour-etudiants-ul" target="_self" title="Bourses de stage pour étudiants UL">Bourses de stage pour étudiants UL</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/formation/bourses-de-stage-pour-etudiants-etrangers" target="_self" title="Bourses de stage pour étudiants étrangers">Bourses de stage pour étudiants étrangers</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/formation/fonds-dacces-des-formations-de-courte-duree" target="_self" title="Fonds d&#039;accès à des formations de courte durée">Fonds d&#039;accès à des formations de courte durée</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/formation/fonds-de-soutien-postdoc" target="_self" title="Fonds de soutien à la mobilité des stagiaires postdoctoraux">Fonds de soutien à la mobilité des stagiaires postdoctoraux</a>
+                                </li>
+                                              </ul>
+                                  -->
+                </li>
+                          <li class="menu-principale-list-item">
+                  <a href="/fr/formation/activites-experientielles" target="_self" title="Activités expérientielles"><span>Activités expérientielles</span></a>
+                    <!--
+                                      <ul class="menu-principale-list" id="sub-header-sub-list">
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/smaart2020" target="_self" title="Bootcamp : Acquisition et traitement de données : du capteur à l&#039;information">Bootcamp : Acquisition et traitement de données : du capteur à l&#039;information</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/smaart2019" target="_self" title="Bootcamp : du développement au déploiement d’un outil optique en milieu nordique">Bootcamp : du développement au déploiement d’un outil optique en milieu nordique</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/ingenieriepergelisol2019" target="_self" title="Ingénierie  du pergélisol appliquée aux infrastructures de transport">Ingénierie  du pergélisol appliquée aux infrastructures de transport</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/reseauxcomplexes2018" target="_self" title="Les réseaux du Nord : structure et fonction">Les réseaux du Nord : structure et fonction</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/reseauxcomplexes2019" target="_self" title="Les réseaux du Nord: Structure et fonction 2019">Les réseaux du Nord: Structure et fonction 2019</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/microbiomes2019" target="_self" title="Microbiomes arctiques: molécules, microbes, écosystèmes et santé">Microbiomes arctiques: molécules, microbes, écosystèmes et santé</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/nordicite2022" target="_self" title="Nordicité et avancées en science des produits naturels">Nordicité et avancées en science des produits naturels</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/baffin2018" target="_self" title="Shedding Light on Arctic marine ecosystem services">Shedding Light on Arctic marine ecosystem services</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/formation/une-cryosphere-en-changement-des-capteurs-la-prise-de-decisions" target="_self" title="Une cryosphère en changement: des capteurs à la prise de décisions">Une cryosphère en changement: des capteurs à la prise de décisions</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/formation/ecoles-doctorales-internationales/ecole-internationale-sur-les-reseaux-complexes" target="_self" title="ÉCOLE INTERNATIONALE SUR LES RÉSEAUX COMPLEXES">ÉCOLE INTERNATIONALE SUR LES RÉSEAUX COMPLEXES</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/ecologie2023" target="_self" title="École doctorale internationale en écologie computationnelle">École doctorale internationale en écologie computationnelle</a>
+                                </li>
+                                              </ul>
+                                  -->
+                </li>
+                          <li class="menu-principale-list-item">
+                  <a href="/fr/ateliers" target="_self" title="Ateliers de formation"><span>Ateliers de formation</span></a>
+                    <!--
+                                      <ul class="menu-principale-list" id="sub-header-sub-list">
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/formation/ateliers-de-formation/atelier-de-communication-scientifique" target="_self" title="Atelier de communication scientifique">Atelier de communication scientifique</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/collaboUL" target="_self" title="Atelier sur la collaboration interdisciplinaire">Atelier sur la collaboration interdisciplinaire</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/ateliers-de-formation/atelier-sur-la-collaboration-interdisciplinaire" target="_self" title="Atelier sur la collaboration interdisciplinaire">Atelier sur la collaboration interdisciplinaire</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/ateliers-de-redaction-scientifique" target="_self" title="Ateliers de rédaction scientifique">Ateliers de rédaction scientifique</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/formation/ateliers-de-formation/communication-orale-en-recherche-MT180" target="_self" title="Communication orale en recherche : 180 secondes pour marquer les esprits">Communication orale en recherche : 180 secondes pour marquer les esprits</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/communications-productives-en-equipe-interdisciplinaire" target="_self" title="Communications productives en équipe interdisciplinaire">Communications productives en équipe interdisciplinaire</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/concevoir-sa-strategie-de-financement-en-recherche" target="_self" title="Concevoir sa stratégie de financement en recherche : par où commencer?">Concevoir sa stratégie de financement en recherche : par où commencer?</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/formation/ateliers-de-formation/creer-des-visuels-dimpact-atelier-dinitiation-au-design-graphique" target="_self" title="Créer des visuels d&#039;impact : atelier d&#039;initiation au design graphique pour scientifiques">Créer des visuels d&#039;impact : atelier d&#039;initiation au design graphique pour scientifiques</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/design-ta-science" target="_self" title="Design ta science!">Design ta science!</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/formation/ateliers-de-formation/environnements-de-recherche-inclusifs-et-innovants-en-contexte" target="_self" title="Environnements de recherche inclusifs et innovants en contexte d’interdisciplinarité">Environnements de recherche inclusifs et innovants en contexte d’interdisciplinarité</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/visualisation-des-donnees-en-recherche" target="_self" title="Faites parler vos données : initiation à la visualisation des données en recherche">Faites parler vos données : initiation à la visualisation des données en recherche</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/financer-la-recherche-relever-le-defi-dune-premiere-demande-de-subvention" target="_self" title="Financer la recherche : Relever le défi d’une première demande de subvention">Financer la recherche : Relever le défi d’une première demande de subvention</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/formation/ateliers-de-formation/formation-intensive-recherche-action-et-mobilisation-en-contexte" target="_self" title="Formation intensive : Recherche-action et mobilisation en contexte autochtone">Formation intensive : Recherche-action et mobilisation en contexte autochtone</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/formation/ateliers-de-formation/integration-des-savoirs-autochtones-en-recherche" target="_self" title="Intégration des savoirs autochtones en recherche">Intégration des savoirs autochtones en recherche</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/formation/ateliers-de-formation/laffiche-scientifique-maximiser-impact" target="_self" title="L&#039;affiche scientifique : apprivoiser le média pour tirer le maximum de son expérience">L&#039;affiche scientifique : apprivoiser le média pour tirer le maximum de son expérience</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/la-gestion-de-projet-dans-un-contexte-de-recherche-et-dinnovation" target="_self" title="La gestion de projet dans un contexte de recherche et d’innovation">La gestion de projet dans un contexte de recherche et d’innovation</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/medias-sociaux-et-recherche" target="_self" title="Médias sociaux et recherche : bien se préparer avant de se lancer">Médias sociaux et recherche : bien se préparer avant de se lancer</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/science-ouverte-et-pandemie" target="_self" title="Science ouverte et pandémie : ce que la situation actuelle nous révèle">Science ouverte et pandémie : ce que la situation actuelle nous révèle</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/formation/ateliers-de-formation/valoriser-votre-recherche-grace-aux-medias" target="_self" title="Valoriser votre recherche grâce aux médias">Valoriser votre recherche grâce aux médias</a>
+                                </li>
+                                              </ul>
+                                  -->
+                </li>
+                          <li class="menu-principale-list-item">
+                  <a href="/fr/communaute/laureats-des-bourses-dexcellence-sentinelle-nord" target="_self" title="Boursiers d'excellence"><span>Boursiers d'excellence</span></a>
+                    <!--
+                                  -->
+                </li>
+                        </ul>
+                    </li>
+                  <li class="menu-principale-item">
+              <a href="#" target="_self" title="Innovation"><span>Innovation</span></a>
+                      <ul class="menu-principale-list" id="sub-header-sub-list">
+                          <li class="menu-principale-list-item">
+                  <a href="/fr/innovation" target="_self" title="Un réseau pour l'innovation"><span>Un réseau pour l'innovation</span></a>
+                    <!--
+                                  -->
+                </li>
+                          <li class="menu-principale-list-item">
+                  <a href="/fr/recherche/plateforme-technologique-de-developpement-dinstruments" target="_self" title="Plateforme technologique"><span>Plateforme technologique</span></a>
+                    <!--
+                                  -->
+                </li>
+                          <li class="menu-principale-list-item">
+                  <a href="/fr/recherche/fonds-de-maturation" target="_self" title="Fonds de maturation"><span>Fonds de maturation</span></a>
+                    <!--
+                                  -->
+                </li>
+                        </ul>
+                    </li>
+                  <li class="menu-principale-item">
+              <a href="#" target="_self" title="Communication"><span>Communication</span></a>
+                      <ul class="menu-principale-list" id="sub-header-sub-list">
+                          <li class="menu-principale-list-item">
+                  <a href="/fr/communication-rayonnement" target="_self" title="Communication et rayonnement"><span>Communication et rayonnement</span></a>
+                    <!--
+                                      <ul class="menu-principale-list" id="sub-header-sub-list">
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/conferences-scientifiques-2021" target="_self" title="Conférences scientifiques">Conférences scientifiques</a>
+                                </li>
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/inuits-et-scientifiques-sattaquent-aux-PFAS" target="_self" title="Inuits et scientifiques s&#039;attaquent aux polluants éternels">Inuits et scientifiques s&#039;attaquent aux polluants éternels</a>
+                                </li>
+                                              </ul>
+                                  -->
+                </li>
+                          <li class="menu-principale-list-item">
+                  <a href="/fr/reunion-scientifique" target="_self" title="Réunion scientifique"><span>Réunion scientifique</span></a>
+                    <!--
+                                      <ul class="menu-principale-list" id="sub-header-sub-list">
+                                                      <li class="menu-principale-list-item">
+                                    <a href="#/fr/reunion-scientifique-2022" target="_self" title="Réunion scientifique 2022">Réunion scientifique 2022</a>
+                                </li>
+                                              </ul>
+                                  -->
+                </li>
+                          <li class="menu-principale-list-item">
+                  <a href="/fr/publications" target="_self" title="Publications"><span>Publications</span></a>
+                    <!--
+                                  -->
+                </li>
+                          <li class="menu-principale-list-item">
+                  <a href="/fr/communication/rapport-dactivites" target="_self" title="Rapport d'activités"><span>Rapport d'activités</span></a>
+                    <!--
+                                  -->
+                </li>
+                          <li class="menu-principale-list-item">
+                  <a href="/fr/communication/outils-communication-visuelle" target="_self" title="Outils et identité visuelle"><span>Outils et identité visuelle</span></a>
+                    <!--
+                                  -->
+                </li>
+                          <li class="menu-principale-list-item">
+                  <a href="/fr/actualites" target="_self" title="Actualités"><span>Actualités</span></a>
+                    <!--
+                                  -->
+                </li>
+                        </ul>
+                    </li>
+                  <li class="menu-principale-item">
+              <a href="#" target="_self" title="Opportunités"><span>Opportunités</span></a>
+                      <ul class="menu-principale-list" id="sub-header-sub-list">
+                          <li class="menu-principale-list-item">
+                  <a href="/fr/concours-et-opportunites" target="_self" title="Concours et opportunités"><span>Concours et opportunités</span></a>
+                    <!--
+                                  -->
+                </li>
+                          <li class="menu-principale-list-item">
+                  <a href="/fr/opportunites-projets-de-recherche" target="_self" title="Offres de projets de recherche"><span>Offres de projets de recherche</span></a>
+                    <!--
+                                  -->
+                </li>
+                          <li class="menu-principale-list-item">
+                  <a href="/fr/fonds-dauteur-sentinelle-nord" target="_self" title="Fonds d’auteur"><span>Fonds d’auteur</span></a>
+                    <!--
+                                  -->
+                </li>
+                          <li class="menu-principale-list-item">
+                  <a href="/fr/recherche/fonds-dacces-aux-infrastructures-nordiques" target="_self" title="Accès aux infrastructures nordiques"><span>Accès aux infrastructures nordiques</span></a>
+                    <!--
+                                  -->
+                </li>
+                          <li class="menu-principale-list-item">
+                  <a href="/fr/defi-idees-mobilisation-des-connaissances" target="_self" title="Défi d'idées : mobilisation des connaissances"><span>Défi d'idées : mobilisation des connaissances</span></a>
+                    <!--
+                                  -->
+                </li>
+                        </ul>
+                    </li>
+                      </ul>
+        </div>
+    </nav>
+    <!-- End Ulaval Header Mockup -->
+    <div class="main content">
+        <div class="vt-wrapper">
+            <div class="vt-section vt-head vt-hero-background" id="vt-intro-head" style="background-image: url(./assets/vit1_header_img.jpg);">
+                <div class="vt-hero-content">
+                    <div class="vit-header">
+                    <div class="vt-section-secondary-title vt-uppercase">Vitrine 01</div>
+                    <div class="vt-section-title">Changing northern terrestrial ecosystems</div>
+                    </div>
+                    <img src="./assets/sn-ellipse.svg" alt="Compendium" id="vt-hero-img">
+                </div>
+            </div>
+            <div class="vt-section">
+                <div class="down-arrow">
+                    <a href="#intro" class="down-arrow-link"><img src="./assets/down-arrow-13.svg" width="40px"></a>
+                </div>
+                <div class="vt-intro-background" id="vt-hero-mask" style="background-image: url(./assets/vit1_img.jpg);">
+                </div>
+            </div>
+            <div class="vit-section">
+                <div class="vit-content">test</div>
+            </div>
+        </div>
+    </div>
+    <!-- ULaval Footer Mockup -->
+    <footer class="normes-ul-pied-page charcoal">
+        <div class="pied-page-contenu">
+            <section class="coordonnees">
+                <div class="bloc-carte">
+                    <a href="https://goo.gl/maps/UTo3tT79p6x" target="_blank">
+                        <img src="http://sn.test/sites/default/files/2017-11/carte-alexandre-vachon.png" alt="Carte" class="carte">
+                    </a>
+                    <img src="http://sn.test/sites/default/files/2017-11/pavillon-Alexandre-Vachon.jpg" alt="Pavillon Alexandre-Vachon" class="photo">
+                </div>
+                <div class="bloc-adresse">
+                    <p class="titre-section">
+                        <strong>
+                            Sentinelle Nord                    </strong>
+                    </p>
+                    <p class="adresse">
+                        Pavillon Alexandre-Vachon<br>
+    1045, avenue de la Médecine, local 3432<br>
+    Université Laval <br>
+    Québec (Québec) G1V 0A6
+                    </p>
+                    <p class="telephone">
+                        Téléphone:<span>418 656-3090</span><br>
+                        Télécopieur:<span>418 656-5515</span>
+                    </p>
+                    <p class="courriel">
+                        Courriel:
+                        <a href="mailto:info@sn.ulaval.ca">info@sn.ulaval.ca</a>
+                    </p>
+                </div>
+            </section>
+            <section class="liens">
+                <p class="titre-section"><strong>
+                        Liens utiles                </strong></p>
+                <div style="" id="" class=" co-n1">
+                    <div id="c293135" class="ancre">&nbsp;</div>
+                    <a id="c293135"></a>
+                    <ul>
+                                                                    <li>
+                                <a href="/fr/recherche">Programme de recherche</a>
+                            </li>
+                                                <li>
+                                <a href="/fr/formation">Programmes de formation</a>
+                            </li>
+                                                <li>
+                                <a href="/fr/innovation">Un réseau pour l'innovation</a>
+                            </li>
+                                                <li>
+                                <a href="/fr/communaute">Communauté Sentinelle Nord</a>
+                            </li>
+                                                <li>
+                                <a href="/fr/reunion-scientifique">Réunion scientifique Sentinelle Nord</a>
+                            </li>
+                                        </ul>
+                </div>
+                <!-- Begin Mailchimp Signup Form -->
+                <div id="mc_embed_signup" class="newsletter">
+                <form action="https://ulaval.us16.list-manage.com/subscribe/post?u=51bafc60feb6536d9bc58f28e&amp;id=6c2f9f05ac" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+                    <div id="mc_embed_signup_scroll">
+                    <p class="titre-section"><strong>Infolettre</strong></p>
+                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Adresse courriel" required="">
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_51bafc60feb6536d9bc58f28e_6c2f9f05ac" tabindex="-1" value=""></div>
+                    <div class="clear"><input type="submit" value="Je m'abonne" name="subscribe" id="mc-embedded-subscribe" class="bouton"></div>
+                    </div>
+                </form>
+                </div>
+
+                <!--End mc_embed_signup-->
+            </section>
+            <section class="communication">
+                <a href="mailto:info@sn.ulaval.ca" class="bouton">
+                    Des questions?            </a>
+                <p><strong>Suivez-nous</strong></p>
+                <a href="https://www.facebook.com/sentinellenord/" class="icon-facebook" target="_blank"></a>
+                <a href="https://twitter.com/sentinelle_nord" class="icon-twitter" target="_blank"></a>
+                <a href="https://www.linkedin.com/school/19211117" class="icon-linkedin" target="_blank"></a>
+                <a href="https://www.youtube.com/channel/UCjP8A2pGYTgtv65r1cIJ7xA" class="icon-youtube" target="_blank"></a>
+
+
+
+
+            </section>
+        </div>
+        <section class="copyright">
+            <p>©
+                2022  | Université Laval Tous droits réservés | <a href="//www.ulaval.ca/conditions.html" target="_blank">Conditions générales d'utilisation</a></p>
+        </section>
+    </footer>
+    <!-- End Ulaval Footer Mockup -->
+</div>
+</body>
+</html>
