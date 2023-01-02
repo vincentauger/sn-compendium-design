@@ -8,7 +8,7 @@ if(isSafari) {
 }
 
 ScrollTrigger.create({
-    trigger: ".vt-head",
+    trigger: "#vt-intro-head",
     start: "top top",
     pin: true,
     pinSpacing: false,
@@ -17,22 +17,46 @@ ScrollTrigger.create({
 gsap.to(".vt-intro-background",
     {
         scrollTrigger: {
-            trigger: ".vt-head",
+            trigger: "#vt-intro-head",
             start: "top top",
             end: "top+=100% top",
             scrub: true,
             markers: false
         },
-        // bring the top position back to 0
-        y: () => "75vh", // window.innerWidth > 992 ? "75vh" : "90vh",
+        y: () => "75vh",
         ease: "none",
     });
 
+gsap.to(".vit-intro-background",
+{
+    scrollTrigger: {
+        trigger: "#vt-intro-head",
+        start: "top top",
+        end: "top+=100% top",
+        scrub: true,
+        markers: false
+    },
+    y: () => "50vh",
+    ease: "none",
+});
+
+gsap.to(".vit-intro-title",
+{
+    scrollTrigger: {
+        trigger: "#vt-intro-head",
+        start: "top top",
+        end: "top+=100% top",
+        scrub: true,
+        markers: false
+    },
+    y: () => "50vh",
+    ease: "none",
+});
 
 
 gsap.to(".down-arrow",{
     scrollTrigger: {
-        trigger: ".vt-head",
+        trigger: "#vt-intro-head",
         start: "-50px top",
         toggleActions: "restart none none reverse",
     },

@@ -18,18 +18,6 @@
     overflow: hidden;
     will-change: transform;
     will-change: filter;
-
-}
-
-.vt-head {
-    min-height: 75vh;
-    height: 75vh;
-}
-
-@media (max-width: 992px) {
-    .vt-head{
-        height: 90vh;
-    }
 }
 
 /* Hero title page */
@@ -37,7 +25,6 @@
 /* Background should cover on all devices and be compatible with
 mobile and Safari */
 .vt-hero-background {
-    /* background: url('../assets/img1_large.jpeg') center top no-repeat scroll; */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom center;
@@ -46,7 +33,17 @@ mobile and Safari */
     position: relative;
     will-change: transform;
     will-change: filter;
+}
 
+.vit-hero-background {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    height: 50vh;
+    width: 100%;
+    position: relative;
+    will-change: transform;
+    will-change: filter;
 }
 
 .vt-hero-content {
@@ -74,7 +71,6 @@ mobile and Safari */
 }
 
 .vt-intro-background {
-    background: url('../assets/img2_large.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -83,6 +79,22 @@ mobile and Safari */
     margin-bottom: 300px;
     height: min(62vw, 460px);
     position: relative;
+}
+
+.vit-intro-background {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    clip-path: circle(min(31vw, 230px));
+    top: calc((-50vh / 2) - (min(31vw, 230px)));
+    margin-bottom: 150px;
+    height: min(62vw, 460px);
+    position: relative;
+}
+
+.vit-intro-title {
+    position: relative;
+    top: calc(-45vh);
 }
 
 .down-arrow {
@@ -127,6 +139,20 @@ mobile and Safari */
         row-gap: 5rem;
         height: auto;
     }
+}
+.vit-vitrine-title{
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    color: #9b9a9a;
+    border-bottom: 1px solid #9b9a9a;
+    padding-bottom: 2rem;
+}
+
+.vit-title {
+    font-size: 3.0rem;
+    font-weight: 400;
+    padding-top: 1rem;
 }
 
 .vt-section-title {
@@ -274,44 +300,93 @@ mobile and Safari */
     filter: brightness(0.5);
 }
 
-.vit-header {
-    position: absolute;
-    margin-top: 8vh;
-    padding-left: 5rem;
-    padding-right: 5rem;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    color: white;
-}
-
-.vit-header .vit-center {
-    position: relative;
-    width: 100%;
+.vit-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: "a b c";
+    grid-gap: 3rem;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: white;
-}
-
-.vit-header .vit-center img {
-    height: 75%;
-}
-
-.vit-section {
-    position: relative;
     width: 100%;
-    height: 100%;
+}
+
+@media (max-width: 800px) {
+    .vit-grid {
+        grid-template-columns: 90vw;
+        grid-template-areas: "a"
+                             "b"
+                             "c";
+        row-gap: 5rem;
+        height: auto;
+        margin-left: 5vw;
+    }
+}
+
+.vit-left {
+    grid-area: a;
     display: flex;
-    align-items: center;
+    justify-content: end;
+}
+
+.vit-center {
+    grid-area: b;
+}
+
+.vit-right {
+    grid-area: c;
+    display: flex;
     flex-direction: column;
+    align-items: center;
 }
-.vit-content {
-    width: min(75vh, 1024px);
+
+.vit-right div {
+    max-width: 75%;
+    text-align: center;
 }
+
+@media screen and (max-width: 800px) {
+    .vit-left {
+        justify-content: start;
+    }
+}
+
+.vit-grid p {
+    color: #817e7e;
+    padding-bottom: 2rem;
+    font-size: 1.75rem;
+    letter-spacing: 0.1em;
+}
+
+.vit-sidetext {
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    line-height: 2.75rem;
+    color: #817e7e;
+    text-transform: uppercase;
+}
+
+.vit-sidetext p {
+    width: 50%;
+}
+
+.vit-download-icon {
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 1rem;
+}
+
+.vit-top-margin {
+    margin-top: 3rem;
+}
+
+@media screen and (max-width: 800px) {
+    .vit-content {
+        width: 90vw;
+    }
+}
+
+
+
 
 
 
