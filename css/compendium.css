@@ -57,9 +57,24 @@ mobile and Safari */
 
 }
 
+.vit-hero-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+}
+
 /* img elements inside vt-hero-content size is 75% of height */
 .vt-hero-content img {
     width: min(80vw, 600px);
+}
+
+.vit-hero-content img {
+    width: min(40vh, 600px);
 }
 
 .vt-section-header {
@@ -85,10 +100,10 @@ mobile and Safari */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    clip-path: circle(min(31vw, 230px));
-    top: calc((-50vh / 2) - (min(31vw, 230px)));
-    margin-bottom: 150px;
-    height: min(62vw, 460px);
+    clip-path: circle(min(15.5vh, 230px));
+    top: calc((-50vh / 2) - (min(15.5vh, 230px)));
+    margin-bottom: 15vh;
+    height: min(31vh, 460px);
     position: relative;
 }
 
