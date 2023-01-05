@@ -63,3 +63,20 @@ gsap.to(".down-arrow",{
     opacity: 0,
 });
 
+
+// read more feature section
+
+document.querySelectorAll(".vit-readmore-container").forEach((container) => {
+    container.querySelectorAll(".vit-readmore-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+            container.querySelector(".vit-readmore-text").classList.toggle("vit-readmore-text-show");
+            //if the text is shown, hide the button with id more
+            container.querySelectorAll(".vit-readmore-btn").forEach((btn) => {
+                // if id is more, hide the button
+                if (btn.id === "more") {
+                    btn.classList.toggle("vit-readmore-btn-hide");
+                }
+            });
+        });
+    });
+});

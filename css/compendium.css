@@ -407,10 +407,25 @@ mobile and Safari */
     overflow-anchor: none;
 }
 
+.vit-readmore-text {
+    display: none;
+}
+
+.vit-readmore-text-show{
+    display: inline;
+}
+
 .vit-readmore-btn {
     appearance: none;
-    cursor: pointer;
-    height: 3rem;
+    border: none;
+    border-bottom: 3px solid #817e7e;
+    background-color: transparent;
+    padding: 0;
+    margin-left: 1rem;
+}
+
+.vit-readmore-btn-hide {
+    display: none;
 }
 
 .vit-readmore-btn:hover {
@@ -418,25 +433,6 @@ mobile and Safari */
     color: white;
 }
 
-.vit-readmore-btn::after{
-    content: url(../assets/expand-more.svg);
-}
-
-.vit-readmore-btn:checked::after{
-    content: url(../assets/expand-less.svg);
-    height: 3rem;
-    width: 3rem;
-}
-
-.vit-readmore:has(+ .vit-readmore-btn:checked) {
-    max-height: none;
-}
-
-.vit-col-right {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-}
 
 
 
