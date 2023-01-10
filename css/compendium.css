@@ -1,7 +1,7 @@
-/* * {
+* {
     box-sizing: border-box;
     outline: 1px solid limegreen !important;
-} */
+}
 
 /* Wrapper Section */
 .vt-wrapper {
@@ -87,7 +87,7 @@ mobile and Safari */
 
 .vt-intro-background {
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: center center;
     clip-path: circle(min(31vw, 230px));
     top: calc(-7rem - (75vh / 2) - (min(31vw, 230px)));
@@ -96,16 +96,23 @@ mobile and Safari */
     position: relative;
 }
 
+
 .vit-intro-background {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    clip-path: circle(min(15.5vh, 230px));
     top: calc((-50vh / 2) - (min(15.5vh, 230px)));
     margin-bottom: 15vh;
-    height: min(31vh, 460px);
+    /* height: min(30.5vh, 460px); */
     position: relative;
+    display: flex;
+    justify-content: center;
 }
+
+.vit-intro-background img {
+
+    height: min(30.75vh, 460px);
+    width: min(30.75vh, 460px);
+}
+
+
 
 .vit-intro-title {
     position: relative;
@@ -330,7 +337,7 @@ mobile and Safari */
         grid-template-areas: "a"
                              "b"
                              "c";
-        row-gap: 5rem;
+        row-gap: 2rem;
         height: auto;
         margin-left: 5vw;
     }

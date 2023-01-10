@@ -34,7 +34,7 @@ gsap.to(".vit-intro-background",
         start: "top top",
         end: "top+=100% top",
         scrub: true,
-        markers: false
+        markers: false,
     },
     y: () => "50vh",
     ease: "none",
